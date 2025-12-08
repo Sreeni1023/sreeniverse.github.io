@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Sreeniverse - Professional WhatsApp Business Automation Solutions for Gyms, Real Estate, Restaurants & More">
-    <meta name="keywords" content="WhatsApp automation, business chatbot, lead generation, Hyderabad">
-    <title>Sreeniverse - WhatsApp Business Automation Solutions</title>
+    <meta name="description" content="Sreeniverse - WhatsApp Business Automation & CA Support Services in Hyderabad. AI-powered chatbots, GST filing automation, invoice processing & more.">
+    <meta name="keywords" content="WhatsApp automation, business chatbot, GST filing, invoice processing, CA services, Hyderabad, Telangana">
+    <meta name="author" content="Dandiga Sreenivas">
+    <title>Sreeniverse - WhatsApp Automation & CA Support Services</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>">
     <style>
         * {
@@ -15,18 +16,17 @@
         }
         
         :root {
-            --primary: #667eea;
-            --secondary: #764ba2;
-            --dark: #2d3748;
-            --light: #f7fafc;
-            --white: #ffffff;
+            --primary: #25D366;
+            --secondary: #128C7E;
+            --accent: #075E54;
+            --dark: #1a1a1a;
+            --light: #f8f9fa;
         }
         
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             line-height: 1.6;
             color: #333;
-            overflow-x: hidden;
         }
         
         .header {
@@ -37,8 +37,7 @@
             width: 100%;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
-            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
         }
         
         .nav-container {
@@ -51,7 +50,7 @@
         }
         
         .logo {
-            font-size: 1.5rem;
+            font-size: 1.8rem;
             font-weight: bold;
             display: flex;
             align-items: center;
@@ -67,8 +66,8 @@
         .nav-links a {
             color: white;
             text-decoration: none;
-            transition: opacity 0.3s;
             font-weight: 500;
+            transition: opacity 0.3s;
         }
         
         .nav-links a:hover {
@@ -78,29 +77,14 @@
         .hero {
             background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
             color: white;
-            padding: 150px 2rem 100px;
+            padding: 140px 2rem 80px;
             text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .hero::before {
-            content: '';
-            position: absolute;
-            width: 500px;
-            height: 500px;
-            background: rgba(255,255,255,0.1);
-            border-radius: 50%;
-            top: -200px;
-            right: -200px;
         }
         
         .hero h1 {
-            font-size: 3rem;
+            font-size: 2.8rem;
             margin-bottom: 1rem;
             animation: fadeInUp 0.8s;
-            position: relative;
-            z-index: 1;
         }
         
         .hero p {
@@ -108,37 +92,11 @@
             margin-bottom: 2rem;
             opacity: 0.95;
             animation: fadeInUp 1s;
-            position: relative;
-            z-index: 1;
-        }
-        
-        .stats {
-            display: flex;
-            justify-content: center;
-            gap: 3rem;
-            margin-top: 3rem;
-            flex-wrap: wrap;
-        }
-        
-        .stat-item {
-            text-align: center;
-            animation: fadeInUp 1.2s;
-        }
-        
-        .stat-number {
-            font-size: 2.5rem;
-            font-weight: bold;
-            display: block;
-        }
-        
-        .stat-label {
-            opacity: 0.9;
-            margin-top: 0.5rem;
         }
         
         .cta-button {
             background: white;
-            color: var(--primary);
+            color: var(--secondary);
             padding: 15px 40px;
             border: none;
             border-radius: 50px;
@@ -146,13 +104,12 @@
             font-weight: bold;
             cursor: pointer;
             transition: all 0.3s;
-            animation: fadeInUp 1.2s;
             box-shadow: 0 5px 20px rgba(0,0,0,0.2);
         }
         
         .cta-button:hover {
             transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
         }
         
         .container {
@@ -177,9 +134,9 @@
         
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 2rem;
-            margin-bottom: 4rem;
+            margin-bottom: 3rem;
         }
         
         .service-card {
@@ -188,29 +145,27 @@
             border-radius: 15px;
             box-shadow: 0 5px 20px rgba(0,0,0,0.08);
             transition: all 0.3s;
-            border: 2px solid transparent;
+            border-left: 4px solid var(--primary);
         }
         
         .service-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 15px 40px rgba(102, 126, 234, 0.15);
-            border-color: var(--primary);
+            box-shadow: 0 15px 40px rgba(37, 211, 102, 0.2);
         }
         
         .service-icon {
             font-size: 3rem;
             margin-bottom: 1rem;
-            display: block;
         }
         
         .service-card h3 {
             font-size: 1.5rem;
             margin-bottom: 1rem;
-            color: var(--primary);
+            color: var(--secondary);
         }
         
         .service-card p {
-            color: #666;
+            color: #555;
             line-height: 1.8;
         }
         
@@ -219,7 +174,7 @@
             padding: 4rem 0;
         }
         
-        .features-list {
+        .features-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 2rem;
@@ -229,19 +184,18 @@
             background: white;
             padding: 1.5rem;
             border-radius: 10px;
-            border-left: 4px solid var(--primary);
+            box-shadow: 0 3px 15px rgba(0,0,0,0.05);
             transition: all 0.3s;
         }
         
         .feature-item:hover {
-            transform: translateX(5px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
         }
         
         .feature-item h4 {
-            color: var(--primary);
+            color: var(--secondary);
             margin-bottom: 0.5rem;
-            font-size: 1.1rem;
         }
         
         .feature-item p {
@@ -249,77 +203,34 @@
             font-size: 0.95rem;
         }
         
-        .pricing {
-            padding: 4rem 2rem;
-            background: linear-gradient(180deg, white 0%, var(--light) 100%);
+        .industries {
+            padding: 4rem 0;
         }
         
-        .pricing-grid {
+        .industries-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            max-width: 1000px;
-            margin: 0 auto;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1.5rem;
         }
         
-        .pricing-card {
+        .industry-item {
             background: white;
-            padding: 2rem;
-            border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            padding: 1.5rem;
+            border-radius: 10px;
             text-align: center;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
             transition: all 0.3s;
-            position: relative;
         }
         
-        .pricing-card:hover {
-            transform: scale(1.05);
+        .industry-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(37, 211, 102, 0.2);
         }
         
-        .pricing-card.featured {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
-            color: white;
-            transform: scale(1.05);
-            border: 3px solid var(--primary);
-        }
-        
-        .pricing-card.featured .badge {
-            position: absolute;
-            top: -15px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: #ffd700;
-            color: var(--dark);
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: bold;
-        }
-        
-        .price {
+        .industry-item span {
             font-size: 2.5rem;
-            font-weight: bold;
-            margin: 1rem 0;
-        }
-        
-        .price span {
-            font-size: 1rem;
-            opacity: 0.8;
-        }
-        
-        .pricing-card ul {
-            text-align: left;
-            list-style: none;
-            padding: 1rem 0;
-        }
-        
-        .pricing-card ul li {
-            padding: 0.5rem 0;
-            border-bottom: 1px solid rgba(0,0,0,0.05);
-        }
-        
-        .pricing-card.featured ul li {
-            border-bottom-color: rgba(255,255,255,0.2);
+            display: block;
+            margin-bottom: 0.5rem;
         }
         
         .contact {
@@ -329,66 +240,48 @@
             text-align: center;
         }
         
-        .contact-info {
-            display: flex;
-            justify-content: center;
-            gap: 3rem;
-            margin-top: 2rem;
-            flex-wrap: wrap;
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
         }
         
         .contact-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 0.5rem;
-            transition: transform 0.3s;
+            background: rgba(255,255,255,0.1);
+            padding: 1.5rem;
+            border-radius: 10px;
+            transition: all 0.3s;
         }
         
         .contact-item:hover {
+            background: rgba(255,255,255,0.15);
             transform: translateY(-5px);
         }
         
         .contact-icon {
-            width: 50px;
-            height: 50px;
-            background: rgba(255,255,255,0.1);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            font-size: 2.5rem;
             margin-bottom: 0.5rem;
         }
         
-        .contact-item svg {
-            width: 24px;
-            height: 24px;
+        .contact-item h4 {
+            margin: 0.5rem 0;
+            font-size: 1.1rem;
+        }
+        
+        .contact-item p {
+            opacity: 0.9;
+            font-size: 0.95rem;
         }
         
         .footer {
-            background: #1a202c;
+            background: #0a0a0a;
             color: white;
             text-align: center;
             padding: 2rem;
-        }
-        
-        .footer-links {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin-top: 1rem;
-            flex-wrap: wrap;
-        }
-        
-        .footer-links a {
-            color: white;
-            text-decoration: none;
-            opacity: 0.8;
-            transition: opacity 0.3s;
-        }
-        
-        .footer-links a:hover {
-            opacity: 1;
         }
         
         @keyframes fadeInUp {
@@ -412,16 +305,8 @@
             }
             
             .services-grid,
-            .pricing-grid {
+            .features-grid {
                 grid-template-columns: 1fr;
-            }
-            
-            .stats {
-                gap: 2rem;
-            }
-            
-            .stat-number {
-                font-size: 2rem;
             }
         }
     </style>
@@ -432,268 +317,186 @@
             <div class="logo">🚀 Sreeniverse</div>
             <ul class="nav-links">
                 <li><a href="#services">Services</a></li>
-                <li><a href="#features">Features</a></li>
-                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#industries">Industries</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <section class="hero">
-        <h1>Transform Your Business with WhatsApp Automation</h1>
-        <p>24/7 Customer Engagement • Automated Lead Generation • Zero Manual Effort</p>
-        
-        <div class="stats">
-            <div class="stat-item">
-                <span class="stat-number">1000+</span>
-                <span class="stat-label">Messages Handled Daily</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number">50+</span>
-                <span class="stat-label">Businesses Served</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number">99.9%</span>
-                <span class="stat-label">Uptime Guarantee</span>
-            </div>
-        </div>
-        
-        <button class="cta-button" onclick="location.href='#contact'">Get Started Free</button>
+        <h1>WhatsApp Business Automation Made Simple</h1>
+        <p>Transform Customer Communication with AI-Powered Bots + CA Support Services</p>
+        <button class="cta-button" onclick="location.href='#contact'">Get Started Today</button>
     </section>
 
     <section id="services" class="container">
-        <h2 class="section-title">Industries We Serve</h2>
-        <p class="section-subtitle">Tailored WhatsApp automation solutions for your business type</p>
+        <h2 class="section-title">Our Core Services</h2>
+        <p class="section-subtitle">Comprehensive automation solutions for modern businesses</p>
         
         <div class="services-grid">
             <div class="service-card">
-                <span class="service-icon">🏋️</span>
-                <h3>Fitness & Gyms</h3>
-                <p>Automated membership inquiries, class schedules, trainer availability, and workout plan sharing. Convert leads while you focus on training.</p>
+                <div class="service-icon">💬</div>
+                <h3>WhatsApp Business Automation</h3>
+                <p>AI-powered chatbots that handle customer inquiries 24/7. Automated responses for timings, pricing, bookings, and support - never miss a customer again.</p>
             </div>
             
             <div class="service-card">
-                <span class="service-icon">🏠</span>
-                <h3>Real Estate</h3>
-                <p>Instant property details, virtual tours, location maps, EMI calculators, and site visit bookings. Never miss a potential buyer.</p>
-            </div>
-            
-            <div class="service-card">
-                <span class="service-icon">🍕</span>
-                <h3>Restaurants & Cafes</h3>
-                <p>Menu sharing, table reservations, order tracking, special offers, and delivery updates. Enhance customer dining experience.</p>
-            </div>
-            
-            <div class="service-card">
-                <span class="service-icon">🏥</span>
-                <h3>Healthcare & Clinics</h3>
-                <p>Appointment scheduling, doctor availability, test reports, medicine reminders, and health tips. Care that never sleeps.</p>
-            </div>
-            
-            <div class="service-card">
-                <span class="service-icon">🎓</span>
-                <h3>Education & Coaching</h3>
-                <p>Course details, fee structure, admission process, batch timings, and study material sharing. Simplify student enrollment.</p>
-            </div>
-            
-            <div class="service-card">
-                <span class="service-icon">🛒</span>
-                <h3>Retail & E-commerce</h3>
-                <p>Product catalogs, order status, payment confirmations, return policies, and customer support. Shop from chat.</p>
+                <div class="service-icon">📊</div>
+                <h3>CA Support Services</h3>
+                <p>Streamline accounting operations with GST filing automation, invoice processing, bank statement conversion, Tally data entry, and financial dashboards.</p>
             </div>
         </div>
     </section>
 
     <section id="features" class="features">
         <div class="container">
-            <h2 class="section-title">Why Sreeniverse?</h2>
-            <p class="section-subtitle">Everything you need to automate customer communication</p>
+            <h2 class="section-title">Why Choose Sreeniverse?</h2>
             
-            <div class="features-list">
+            <div class="features-grid">
                 <div class="feature-item">
                     <h4>✅ Official WhatsApp API</h4>
-                    <p>100% safe with Meta's official API. No ban risk. Verified business badge included.</p>
+                    <p>100% safe, no ban risk. Verified business badge included.</p>
                 </div>
                 
                 <div class="feature-item">
-                    <h4>🤖 AI-Powered Responses</h4>
-                    <p>Intelligent auto-replies that understand customer intent in multiple languages.</p>
+                    <h4>🤖 Smart Auto-Replies</h4>
+                    <p>Intelligent responses in Telugu, Hindi, English & more.</p>
                 </div>
                 
                 <div class="feature-item">
                     <h4>📊 Lead Generation</h4>
-                    <p>Automatic capture of customer details with organized CRM integration.</p>
+                    <p>Automatic customer data capture and organized storage.</p>
                 </div>
                 
                 <div class="feature-item">
-                    <h4>📅 Smart Booking</h4>
-                    <p>Let customers book appointments directly through WhatsApp chat.</p>
+                    <h4>📅 Appointment Booking</h4>
+                    <p>Let customers book slots directly through WhatsApp.</p>
                 </div>
                 
                 <div class="feature-item">
                     <h4>💰 Payment Integration</h4>
-                    <p>Send payment links, reminders, and track transactions seamlessly.</p>
+                    <p>Send payment links, reminders, and track transactions.</p>
                 </div>
                 
                 <div class="feature-item">
                     <h4>📈 Analytics Dashboard</h4>
-                    <p>Real-time insights on messages, leads, conversions, and ROI.</p>
+                    <p>Real-time insights on messages, leads, and conversions.</p>
                 </div>
                 
                 <div class="feature-item">
-                    <h4>🌐 Multi-Language Support</h4>
-                    <p>Communicate in Telugu, Hindi, English, and 10+ other languages.</p>
+                    <h4>🌐 Multi-Language</h4>
+                    <p>Support for Telugu, Hindi, English, and more languages.</p>
                 </div>
                 
                 <div class="feature-item">
                     <h4>⚡ 24/7 Availability</h4>
-                    <p>Your business never sleeps. Instant responses anytime, anywhere.</p>
-                </div>
-                
-                <div class="feature-item">
-                    <h4>📱 Media Sharing</h4>
-                    <p>Send images, PDFs, videos, and catalogs automatically.</p>
-                </div>
-                
-                <div class="feature-item">
-                    <h4>🔔 Smart Notifications</h4>
-                    <p>Automated reminders for payments, appointments, and follow-ups.</p>
-                </div>
-                
-                <div class="feature-item">
-                    <h4>👥 Team Collaboration</h4>
-                    <p>Multiple team members can handle conversations simultaneously.</p>
-                </div>
-                
-                <div class="feature-item">
-                    <h4>🔒 Data Security</h4>
-                    <p>Enterprise-grade encryption and GDPR-compliant data handling.</p>
+                    <p>Your business never sleeps. Instant responses anytime.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="pricing" class="pricing">
+    <section id="industries" class="industries">
         <div class="container">
-            <h2 class="section-title">Simple, Transparent Pricing</h2>
-            <p class="section-subtitle">Choose the plan that fits your business needs</p>
+            <h2 class="section-title">Industries We Serve</h2>
+            <p class="section-subtitle">WhatsApp automation solutions across multiple sectors</p>
             
-            <div class="pricing-grid">
-                <div class="pricing-card">
-                    <h3>Starter</h3>
-                    <div class="price">₹3,000<span>/month</span></div>
-                    <ul>
-                        <li>✓ Up to 500 conversations</li>
-                        <li>✓ Basic auto-replies</li>
-                        <li>✓ Lead capture & storage</li>
-                        <li>✓ Location sharing</li>
-                        <li>✓ Business hours setup</li>
-                        <li>✓ Email support</li>
-                    </ul>
-                    <button class="cta-button" style="margin-top: 1rem; background: var(--primary); color: white;">Get Started</button>
+            <div class="industries-grid">
+                <div class="industry-item">
+                    <span>🏋️</span>
+                    <strong>Fitness & Gyms</strong>
                 </div>
-                
-                <div class="pricing-card featured">
-                    <div class="badge">MOST POPULAR</div>
-                    <h3>Professional</h3>
-                    <div class="price">₹5,000<span>/month</span></div>
-                    <ul>
-                        <li>✓ Up to 2000 conversations</li>
-                        <li>✓ Advanced AI responses</li>
-                        <li>✓ Appointment booking</li>
-                        <li>✓ Payment integration</li>
-                        <li>✓ Analytics dashboard</li>
-                        <li>✓ Multi-language support</li>
-                        <li>✓ Media sharing</li>
-                        <li>✓ Priority support</li>
-                    </ul>
-                    <button class="cta-button" style="margin-top: 1rem;">Start Free Trial</button>
+                <div class="industry-item">
+                    <span>🏠</span>
+                    <strong>Real Estate</strong>
                 </div>
-                
-                <div class="pricing-card">
-                    <h3>Enterprise</h3>
-                    <div class="price">Custom</div>
-                    <ul>
-                        <li>✓ Unlimited conversations</li>
-                        <li>✓ Custom integrations</li>
-                        <li>✓ Multi-location support</li>
-                        <li>✓ Dedicated manager</li>
-                        <li>✓ White-label solution</li>
-                        <li>✓ API access</li>
-                        <li>✓ Custom features</li>
-                        <li>✓ 24/7 phone support</li>
-                    </ul>
-                    <button class="cta-button" style="margin-top: 1rem; background: var(--primary); color: white;">Contact Sales</button>
+                <div class="industry-item">
+                    <span>🍕</span>
+                    <strong>Restaurants</strong>
+                </div>
+                <div class="industry-item">
+                    <span>🏥</span>
+                    <strong>Healthcare</strong>
+                </div>
+                <div class="industry-item">
+                    <span>🎓</span>
+                    <strong>Education</strong>
+                </div>
+                <div class="industry-item">
+                    <span>🛒</span>
+                    <strong>Retail</strong>
+                </div>
+                <div class="industry-item">
+                    <span>💼</span>
+                    <strong>CA Firms</strong>
+                </div>
+                <div class="industry-item">
+                    <span>🏢</span>
+                    <strong>Corporates</strong>
+                </div>
+                <div class="industry-item">
+                    <span>🏪</span>
+                    <strong>SMEs</strong>
+                </div>
+                <div class="industry-item">
+                    <span>💻</span>
+                    <strong>IT Services</strong>
+                </div>
+                <div class="industry-item">
+                    <span>🚗</span>
+                    <strong>Automotive</strong>
+                </div>
+                <div class="industry-item">
+                    <span>📦</span>
+                    <strong>Logistics</strong>
                 </div>
             </div>
-            
-            <p style="text-align: center; margin-top: 3rem; color: #666; font-size: 1.1rem;">
-                💡 <strong>One-time setup fee: ₹8,000-12,000</strong> (Includes complete configuration, training & 1-month free support)
-            </p>
         </div>
     </section>
 
     <section id="contact" class="contact">
-        <h2 style="margin-bottom: 1rem; font-size: 2.5rem;">Ready to Transform Your Business?</h2>
-        <p style="font-size: 1.2rem; margin-bottom: 2rem; opacity: 0.9;">Let's discuss how WhatsApp automation can 10x your customer engagement</p>
+        <h2 style="margin-bottom: 1rem; font-size: 2.5rem;">Let's Transform Your Business</h2>
+        <p style="font-size: 1.2rem; margin-bottom: 2rem; opacity: 0.9;">Get in touch for a free consultation</p>
         
-        <div class="contact-info">
+        <div class="contact-grid">
             <div class="contact-item">
-                <div class="contact-icon">
-                    <svg fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-                    </svg>
-                </div>
-                <strong>Email</strong>
-                <span>contact@sreeniverse.com</span>
+                <div class="contact-icon">👤</div>
+                <h4>Founder</h4>
+                <p>Dandiga Sreenivas (Sreeni)</p>
             </div>
             
             <div class="contact-item">
-                <div class="contact-icon">
-                    <svg fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
-                    </svg>
-                </div>
-                <strong>Phone</strong>
-                <span>+91 98765 43210</span>
+                <div class="contact-icon">📱</div>
+                <h4>Phone / WhatsApp</h4>
+                <p>+91 93474 88883</p>
             </div>
             
             <div class="contact-item">
-                <div class="contact-icon">
-                    <svg fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-                    </svg>
-                </div>
-                <strong>WhatsApp</strong>
-                <span>Chat with us</span>
+                <div class="contact-icon">✉️</div>
+                <h4>Email</h4>
+                <p>sreeni.aitech.automations@gmail.com</p>
             </div>
             
             <div class="contact-item">
-                <div class="contact-icon">
-                    <svg fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
-                    </svg>
-                </div>
-                <strong>Location</strong>
-                <span>Hyderabad, Telangana</span>
+                <div class="contact-icon">📍</div>
+                <h4>Location</h4>
+                <p>Hyderabad, Yamjal<br>RR District, Telangana</p>
             </div>
         </div>
         
-        <button class="cta-button" style="margin-top: 3rem;" onclick="window.location.href='mailto:contact@sreeniverse.com?subject=WhatsApp Automation Inquiry'">
-            Schedule Free Consultation
+        <button class="cta-button" style="margin-top: 2rem;" onclick="window.location.href='mailto:sreeni.aitech.automations@gmail.com?subject=Business Inquiry'">
+            Send Email
+        </button>
+        
+        <button class="cta-button" style="margin-top: 1rem; margin-left: 1rem; background: var(--primary); color: white;" onclick="window.location.href='https://wa.me/919347488883?text=Hi, I am interested in your automation services'">
+            WhatsApp Us
         </button>
     </section>
 
     <footer class="footer">
         <p>&copy; 2024 Sreeniverse Technologies. All rights reserved.</p>
-        <div class="footer-links">
-            <a href="#services">Services</a>
-            <a href="#features">Features</a>
-            <a href="#pricing">Pricing</a>
-            <a href="mailto:contact@sreeniverse.com">Contact</a>
-        </div>
-        <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.7;">
-            Empowering Businesses with Smart Automation | Based in Hyderabad, Serving Pan-India
+        <p style="margin-top: 0.5rem; font-size: 0.9rem; opacity: 0.7;">
+            Empowering Businesses with Smart Automation | Hyderabad, Telangana
         </p>
     </footer>
 </body>
