@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="te">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>తెలుగు Property Tax Calculator | 25+ Cities | Sreeniverse</title>
+    <meta name="description" content="తెలుగు ప్రాపర్టీ టాక్స్ కాలిక్యులేటర్ - 25+ నగరాలు | Hyderabad, Vijayawada, Vizag | ఉచితం - Sreeniverse">
+    <meta name="keywords" content="property tax telugu, hyderabad property tax, విజయవాడ property tax, తెలుగు calculator, sreeniverse">
+    <meta name="author" content="Sreeniverse">
+    
+    <!-- Google AdSense - Add your code here after approval -->
+    <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXX" crossorigin="anonymous"></script> -->
+    
+    <!-- Google Analytics - Add your tracking code here -->
+    <!-- Google tag (gtag.js) -->
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            padding: 40px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .logo-icon {
+            font-size: 40px;
+        }
+
+        .logo-text {
+            font-size: 28px;
+            font-weight: bold;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        h1 {
+            color: #333;
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: #666;
+            font-size: 16px;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        label {
+            display: block;
+            color: #333;
+            font-weight: 600;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        select, input {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            font-size: 16px;
+            transition: all 0.3s;
+        }
+
+        select:focus, input:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        .zone-areas {
+            font-size: 13px;
+            color: #888;
+            margin-top: 5px;
+            font-style: italic;
+        }
+
+        .calculate-btn {
+            width: 100%;
+            padding: 18px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .calculate-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+        }
+
+        .result {
+            display: none;
+            margin-top: 30px;
+            padding: 30px;
+            background: linear-gradient(135deg, #f6f9fc 0%, #e9f2ff 100%);
+            border-radius: 15px;
+            border-left: 5px solid #667eea;
+        }
+
+        .result.show {
+            display: block;
+            animation: slideIn 0.5s ease;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .result-title {
+            color: #667eea;
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .result-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 12px 0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .result-item:last-child {
+            border-bottom: none;
+            font-size: 24px;
+            font-weight: bold;
+            color: #667eea;
+            margin-top: 10px;
+        }
+
+        .result-label {
+            color: #666;
+        }
+
+        .result-value {
+            color: #333;
+            font-weight: 600;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid #e0e0e0;
+            color: #888;
+        }
+
+        .footer-links {
+            margin-top: 15px;
+        }
+
+        .footer-links a {
+            color: #667eea;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 500;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 25px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            .logo-text {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                <span class="logo-icon">🏠</span>
+                <span class="logo-text">Sreeniverse</span>
+            </div>
+            <h1>తెలుగు Property Tax Calculator</h1>
+            <p class="subtitle">25+ నగరాలు | వేగవంతమైన మరియు ఖచ్చితమైన లెక్కింపు</p>
+        </div>
+
+        <form id="taxForm">
+            <div class="form-group">
+                <label>నగరం ఎంచుకోండి (Select City):</label>
+                <select id="city" required>
+                    <option value="">నగరం ఎంచుకోండి...</option>
+                    <optgroup label="తెలంగాణ (Telangana)">
+                        <option value="hyderabad">హైదరాబాద్ (Hyderabad)</option>
+                        <option value="warangal">వరంగల్ (Warangal)</option>
+                        <option value="nizamabad">నిజామాబాద్ (Nizamabad)</option>
+                        <option value="karimnagar">కరీంనగర్ (Karimnagar)</option>
+                        <option value="khammam">ఖమ్మం (Khammam)</option>
+                        <option value="mahbubnagar">మహబూబ్‌నగర్ (Mahbubnagar)</option>
+                        <option value="nalgonda">నల్గొండ (Nalgonda)</option>
+                        <option value="adilabad">ఆదిలాబాద్ (Adilabad)</option>
+                        <option value="suryapet">సూర్యాపేట (Suryapet)</option>
+                        <option value="siddipet">సిద్దిపేట (Siddipet)</option>
+                    </optgroup>
+                    <optgroup label="ఆంధ్ర ప్రదేశ్ (Andhra Pradesh)">
+                        <option value="vijayawada">విజయవాడ (Vijayawada)</option>
+                        <option value="visakhapatnam">విశాఖపట్నం (Visakhapatnam)</option>
+                        <option value="guntur">గుంటూరు (Guntur)</option>
+                        <option value="tirupati">తిరుపతి (Tirupati)</option>
+                        <option value="kakinada">కాకినాడ (Kakinada)</option>
+                        <option value="rajahmundry">రాజమండ్రి (Rajahmundry)</option>
+                        <option value="nellore">నెల్లూరు (Nellore)</option>
+                        <option value="kurnool">కర్నూల్ (Kurnool)</option>
+                        <option value="kadapa">కడప (Kadapa)</option>
+                        <option value="anantapur">అనంతపురం (Anantapur)</option>
+                        <option value="eluru">ఏలూరు (Eluru)</option>
+                        <option value="ongole">ఒంగోలు (Ongole)</option>
+                        <option value="chittoor">చిత్తూరు (Chittoor)</option>
+                        <option value="vizianagaram">విజయనగరం (Vizianagaram)</option>
+                        <option value="machilipatnam">మచిలీపట్నం (Machilipatnam)</option>
+                    </optgroup>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>జోన్ ఎంచుకోండి (Select Zone):</label>
+                <select id="zone" required>
+                    <option value="">ముందుగా నగరం ఎంచుకోండి...</option>
+                </select>
+                <div class="zone-areas" id="zoneAreas"></div>
+            </div>
+
+            <div class="form-group">
+                <label>ప్రాపర్టీ రకం (Property Type):</label>
+                <select id="propertyType" required>
+                    <option value="">ఎంచుకోండి...</option>
+                    <option value="residential">నివాస (Residential)</option>
+                    <option value="commercial">వాణిజ్య (Commercial)</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>విస్తీర్ణం (Area in sq.ft):</label>
+                <input type="number" id="area" placeholder="ఉదా: 1200" required min="100">
+            </div>
+
+            <div class="form-group">
+                <label>భవనం వయస్సు (Building Age):</label>
+                <select id="age" required>
+                    <option value="">ఎంచుకోండి...</option>
+                    <option value="0-5">0-5 సంవత్సరాలు (కొత్త)</option>
+                    <option value="5-10">5-10 సంవత్సరాలు</option>
+                    <option value="10-20">10-20 సంవత్సరాలు</option>
+                    <option value="20-30">20-30 సంవత్సరాలు</option>
+                    <option value="30-40">30-40 సంవత్సరాలు</option>
+                    <option value="40+">40+ సంవత్సరాలు (పాత)</option>
+                </select>
+            </div>
+
+            <button type="submit" class="calculate-btn">
+                లెక్కించండి (Calculate Tax)
+            </button>
+        </form>
+
+        <div class="result" id="result">
+            <div class="result-title">మీ Property Tax వివరాలు:</div>
+            <div class="result-item">
+                <span class="result-label">నగరం:</span>
+                <span class="result-value" id="resCity"></span>
+            </div>
+            <div class="result-item">
+                <span class="result-label">జోన్:</span>
+                <span class="result-value" id="resZone"></span>
+            </div>
+            <div class="result-item">
+                <span class="result-label">ప్రాపర్టీ రకం:</span>
+                <span class="result-value" id="resType"></span>
+            </div>
+            <div class="result-item">
+                <span class="result-label">విస్తీర్ణం:</span>
+                <span class="result-value" id="resArea"></span>
+            </div>
+            <div class="result-item">
+                <span class="result-label">భవనం వయస్సు:</span>
+                <span class="result-value" id="resAge"></span>
+            </div>
+            <div class="result-item">
+                <span class="result-label">వయస్సు తగ్గింపు:</span>
+                <span class="result-value" id="resDepreciation"></span>
+            </div>
+            <div class="result-item">
+                <span class="result-label">వార్షిక Property Tax:</span>
+                <span class="result-value" id="resTax"></span>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>© 2025 Sreeniverse. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact</a>
+                <a href="index.html">Home</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const cityZones = {
+            hyderabad: [
+                { value: "1", label: "జోన్ 1 - ప్రీమియం", areas: "Banjara Hills, Jubilee Hills, Gachibowli, Madhapur, Kondapur, Film Nagar", rate: 25 },
+                { value: "2", label: "జోన్ 2 - అభివృద్ధి", areas: "Kukatpally, Miyapur, Nizampet, KPHB, Bachupally, Kompally, Alwal", rate: 18 },
+                { value: "3", label: "జోన్ 3 - నగర", areas: "Secunderabad, Begumpet, Ameerpet, SR Nagar, Erragadda, Panjagutta", rate: 15 },
+                { value: "4", label: "జోన్ 4 - విస్తృత", areas: "LB Nagar, Dilsukhnagar, Uppal, Nagole, Malakpet, Chaitanyapuri", rate: 12 },
+                { value: "5", label: "జోన్ 5 - బాహ్య", areas: "Shamshabad, Patancheru, Medchal, Moinabad, Shankarpally", rate: 8 },
+                { value: "6", label: "జోన్ 6 - గ్రామీణ", areas: "Outer areas, Villages, Mandals", rate: 6 }
+            ],
+            vijayawada: [
+                { value: "1", label: "జోన్ 1 - కేంద్ర", areas: "MG Road, Benz Circle, Governorpet, Labbipet, One Town", rate: 20 },
+                { value: "2", label: "జోన్ 2 - అభివృద్ధి", areas: "Bhavanipuram, Patamata, Suryaraopet, Gunadala", rate: 15 },
+                { value: "3", label: "జోన్ 3 - నగర", areas: "Ajit Singh Nagar, Kanchikacherla, Gannavaram", rate: 12 },
+                { value: "4", label: "జోన్ 4 - బాహ్య", areas: "Poranki, Prasadampadu, Nidamanuru, Tadepalli", rate: 8 }
+            ],
+            visakhapatnam: [
+                { value: "1", label: "జోన్ 1 - బీచ్", areas: "RK Beach, Beach Road, Waltair, Kirlampudi, MVP Colony", rate: 22 },
+                { value: "2", label: "జోన్ 2 - అభివృద్ధి", areas: "Madhurawada, Rushikonda, Gajuwaka, PM Palem", rate: 16 },
+                { value: "3", label: "జోన్ 3 - నగర", areas: "Dwaraka Nagar, Seethammadhara, Akkayyapalem", rate: 13 },
+                { value: "4", label: "జోన్ 4 - బాహ్య", areas: "Anakapalle, Sabbavaram, Pedagantyada, Atchutapuram", rate: 9 }
+            ],
+            guntur: [
+                { value: "1", label: "జోన్ 1 - కేంద్ర", areas: "Kothapet, Lakshmipuram, Arundelpet, Brodipet", rate: 18 },
+                { value: "2", label: "జోన్ 2 - నగర", areas: "Nagarampalem, Pedakakani, Pattabhipuram", rate: 14 },
+                { value: "3", label: "జోన్ 3 - బాహ్య", areas: "Tadikonda, Mangalagiri, Kakumanu, Prathipadu", rate: 10 }
+            ],
+            warangal: [
+                { value: "1", label: "జోన్ 1 - కేంద్ర", areas: "Hanamkonda, Kazipet, Station Road", rate: 16 },
+                { value: "2", label: "జోన్ 2 - నగర", areas: "Subedari, Nakkalagutta, Waddepally", rate: 12 },
+                { value: "3", label: "జోన్ 3 - బాహ్య", areas: "Atmakur, Inavolu, Geesugonda", rate: 8 }
+            ],
+            tirupati: [
+                { value: "1", label: "జోన్ 1 - ప్రధాన", areas: "Tilak Road, AIR Bypass Road, Karakambadi Road", rate: 19 },
+                { value: "2", label: "జోన్ 2 - నగర", areas: "Renigunta, Chandragiri, Mangalam", rate: 14 },
+                { value: "3", label: "జోన్ 3 - బాహ్య", areas: "Srikalahasti, Puttur, Pakala", rate: 10 }
+            ],
+            kakinada: [
+                { value: "1", label: "జోన్ 1 - కేంద్ర", areas: "Main Road, Jawahar Street, Suryarao Pet", rate: 17 },
+                { value: "2", label: "జోన్ 2 - నగర", areas: "Sarpavaram, Turangi, Ramanayyapeta", rate: 13 },
+                { value: "3", label: "జోన్ 3 - బాహ్య", areas: "Peddapuram, Tuni, Samalkot", rate: 9 }
+            ]
+        };
+
+        const defaultZones = [
+            { value: "1", label: "జోన్ 1 - కేంద్ర", areas: "Central business areas, Main roads", rate: 15 },
+            { value: "2", label: "జోన్ 2 - నగర", areas: "Urban residential areas", rate: 11 },
+            { value: "3", label: "జోన్ 3 - బాహ్య", areas: "Suburban and outer areas", rate: 8 }
+        ];
+
+        const ageDepreciation = {
+            "0-5": { label: "0-5 సంవత్సరాలు (0% తగ్గింపు)", factor: 1.00 },
+            "5-10": { label: "5-10 సంవత్సరాలు (10% తగ్గింపు)", factor: 0.90 },
+            "10-20": { label: "10-20 సంవత్సరాలు (20% తగ్గింపు)", factor: 0.80 },
+            "20-30": { label: "20-30 సంవత్సరాలు (30% తగ్గింపు)", factor: 0.70 },
+            "30-40": { label: "30-40 సంవత్సరాలు (40% తగ్గింపు)", factor: 0.60 },
+            "40+": { label: "40+ సంవత్సరాలు (50% తగ్గింపు)", factor: 0.50 }
+        };
+
+        document.getElementById('city').addEventListener('change', function() {
+            const city = this.value;
+            const zoneSelect = document.getElementById('zone');
+            const zoneAreas = document.getElementById('zoneAreas');
+            
+            zoneSelect.innerHTML = '<option value="">జోన్ ఎంచుకోండి...</option>';
+            zoneAreas.textContent = '';
+            
+            if (city) {
+                const zones = cityZones[city] || defaultZones;
+                zones.forEach(zone => {
+                    const option = document.createElement('option');
+                    option.value = zone.value;
+                    option.textContent = zone.label;
+                    option.dataset.rate = zone.rate;
+                    option.dataset.areas = zone.areas;
+                    zoneSelect.appendChild(option);
+                });
+            }
+        });
+
+        document.getElementById('zone').addEventListener('change', function() {
+            const selectedOption = this.options[this.selectedIndex];
+            const zoneAreas = document.getElementById('zoneAreas');
+            
+            if (selectedOption.dataset.areas) {
+                zoneAreas.textContent = `ప్రాంతాలు: ${selectedOption.dataset.areas}`;
+            } else {
+                zoneAreas.textContent = '';
+            }
+        });
+
+        document.getElementById('taxForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const city = document.getElementById('city');
+            const zone = document.getElementById('zone');
+            const propertyType = document.getElementById('propertyType');
+            const area = parseFloat(document.getElementById('area').value);
+            const age = document.getElementById('age').value;
+            
+            const selectedZone = zone.options[zone.selectedIndex];
+            const baseRate = parseFloat(selectedZone.dataset.rate);
+            const typeMultiplier = propertyType.value === 'commercial' ? 1.5 : 1;
+            const ageData = ageDepreciation[age];
+            
+            const annualTax = Math.round(area * baseRate * typeMultiplier * ageData.factor);
+            
+            document.getElementById('resCity').textContent = city.options[city.selectedIndex].text;
+            document.getElementById('resZone').textContent = selectedZone.text;
+            document.getElementById('resType').textContent = propertyType.options[propertyType.selectedIndex].text;
+            document.getElementById('resArea').textContent = area + ' sq.ft';
+            document.getElementById('resAge').textContent = ageData.label;
+            document.getElementById('resDepreciation').textContent = Math.round((1 - ageData.factor) * 100) + '%';
+            document.getElementById('resTax').textContent = '₹' + annualTax.toLocaleString('en-IN');
+            
+            document.getElementById('result').classList.add('show');
+            document.getElementById('result').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        });
+    </script>
+</body>
+</html>
