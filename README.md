@@ -27,19 +27,6 @@ Transform customer communication with AI-powered chatbots that work 24/7.
 - 📈 Real-time analytics dashboard
 - 🌐 Multi-language support (Telugu, Hindi, English)
 
-### 2. 📊 CA Support Services
-Streamline accounting operations with intelligent automation tools.
-
-**Features:**
-- GST filing automation
-- Invoice processing and validation
-- Bank statement conversion
-- Tally data entry automation
-- Financial dashboards and reports
-- Compliance tracking and alerts
-
----
-
 ## 🏢 Industries We Serve
 
 We provide automation solutions across multiple sectors:
@@ -122,7 +109,7 @@ To empower small and medium businesses with enterprise-grade automation solution
 ## 💡 Why Choose Sreeniverse?
 
 1. **Affordable Pricing** - 40-60% cheaper than competitors
-2. **Local Support** - Telugu & Hindi language support
+2. **Local Support** - Telugu & English language support
 3. **Quick Setup** - 48-hour onboarding
 4. **Customization** - Tailored for Indian businesses
 5. **No Lock-in** - Monthly cancellation allowed
