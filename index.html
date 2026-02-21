@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sreeniverse — WhatsApp Business Automation, Legal Metrology (WeighTrack), Social Media Management. Hyderabad's smart automation partner.">
+  <meta name="keywords" content="WhatsApp automation Hyderabad, Legal Metrology WeighTrack, social media management Hyderabad, business automation Telangana">
+  <meta name="author" content="Dandiga Sreenivas">
+  <title>Sreeniverse — Smart Business Automation | Hyderabad</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>">
+  <link href="https://fonts.googleapis.com/css2?family=Clash+Display:wght@500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+
+    :root {
+      /* Brand */
+      --wa:    #25D366;
+      --wa-d:  #128C7E;
+      --wa-x:  #075E54;
+      /* SMM — vivid violet-blue */
+      --sm:    #7C3AED;
+      --sm-l:  #A78BFA;
+      --sm-bg: rgba(124,58,237,.08);
+      /* WeighTrack — electric amber */
+      --wt:    #F59E0B;
+      --wt-l:  #FCD34D;
+      --wt-bg: rgba(245,158,11,.08);
+      /* Base */
+      --ink:   #080C10;
+      --ink2:  #0F1419;
+      --surf:  #151C24;
+      --surf2: #1C2530;
+      --bdr:   rgba(255,255,255,0.06);
+      --bdr2:  rgba(255,255,255,0.11);
+      --txt:   #E8F0FE;
+      --mut:   #7B8FA6;
+      --neon:  #00FF94;
+    }
+
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Outfit', sans-serif;
+      background: var(--ink);
+      color: var(--txt);
+      overflow-x: hidden;
+    }
+
+    /* ══════════════════════════════
+       NAV
+    ══════════════════════════════ */
+    nav {
+      position: fixed; top: 0; width: 100%; z-index: 1000;
+      padding: .9rem 2rem;
+      display: flex; justify-content: space-between; align-items: center;
+      background: rgba(8,12,16,0.88);
+      backdrop-filter: blur(24px);
+      border-bottom: 1px solid var(--bdr);
+    }
+    .logo {
+      font-family: 'Clash Display', sans-serif;
+      font-weight: 700; font-size: 1.55rem;
+      color: var(--wa); text-decoration: none; letter-spacing: -.3px;
+    }
+    .logo span { color: var(--txt); }
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a { color: var(--mut); text-decoration: none; font-size: .88rem; font-weight: 500; transition: color .2s; }
+    .nav-links a:hover { color: var(--txt); }
+    .nav-cta {
+      background: var(--wa); color: #000;
+      padding: .5rem 1.3rem; border-radius: 6px;
+      font-weight: 700; font-size: .85rem;
+      text-decoration: none; transition: all .2s;
+      display: flex; align-items: center; gap: .4rem;
+    }
+    .nav-cta:hover { background: var(--neon); transform: translateY(-1px); }
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
+    .hamburger span { display: block; width: 22px; height: 2px; background: var(--txt); border-radius: 2px; transition: all .3s; }
+    .mob-menu { display: none; position: fixed; top: 62px; left: 0; right: 0; z-index: 999; background: rgba(8,12,16,.97); backdrop-filter: blur(20px); border-bottom: 1px solid var(--bdr); padding: 1.5rem; flex-direction: column; gap: 1rem; }
+    .mob-menu.open { display: flex; }
+    .mob-menu a { color: var(--txt); text-decoration: none; font-size: 1rem; font-weight: 500; padding: .6rem 0; border-bottom: 1px solid var(--bdr); }
+    .mob-menu a:last-child { border: none; color: var(--wa); font-weight: 700; }
+
+    /* ══════════════════════════════
+       HERO
+    ══════════════════════════════ */
+    .hero {
+      min-height: 100vh;
+      display: flex; align-items: center; justify-content: center;
+      text-align: center; padding: 120px 2rem 90px;
+      position: relative; overflow: hidden;
+    }
+    .hero-bg {
+      position: absolute; inset: 0; pointer-events: none;
+      background:
+        radial-gradient(ellipse 60% 50% at 20% 60%, rgba(37,211,102,.09) 0%, transparent 60%),
+        radial-gradient(ellipse 50% 40% at 80% 30%, rgba(124,58,237,.09) 0%, transparent 60%),
+        radial-gradient(ellipse 40% 35% at 60% 80%, rgba(245,158,11,.07) 0%, transparent 60%);
+    }
+    .hero-dots {
+      position: absolute; inset: 0; pointer-events: none;
+      background-image: radial-gradient(circle, rgba(255,255,255,.04) 1px, transparent 1px);
+      background-size: 32px 32px;
+      mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 0%, transparent 75%);
+    }
+    .hero-content { position: relative; z-index: 1; max-width: 860px; }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: .45rem;
+      background: rgba(37,211,102,.1); border: 1px solid rgba(37,211,102,.25);
+      color: var(--wa); font-size: .78rem; font-weight: 600; letter-spacing: .5px;
+      padding: .35rem 1rem; border-radius: 50px; margin-bottom: 1.6rem;
+      animation: fadeUp .5s ease both;
+    }
+    .hero h1 {
+      font-family: 'Clash Display', sans-serif;
+      font-size: clamp(2.4rem, 6vw, 4.4rem);
+      font-weight: 700; line-height: 1.08; margin-bottom: 1.2rem;
+      animation: fadeUp .65s ease both;
+      letter-spacing: -.5px;
+    }
+    .hero h1 .g { color: var(--wa); }
+    .hero-en { font-size: 1.1rem; color: var(--mut); max-width: 580px; margin: 0 auto .7rem; line-height: 1.75; animation: fadeUp .75s ease both; }
+    .hero-te { font-size: .98rem; color: rgba(37,211,102,.6); max-width: 560px; margin: 0 auto 2.4rem; line-height: 1.7; font-style: italic; animation: fadeUp .82s ease both; }
+    .hero-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; animation: fadeUp .9s ease both; }
+    .btn-g {
+      background: var(--wa); color: #000;
+      padding: .9rem 2rem; border-radius: 8px; font-weight: 700; font-size: .95rem;
+      text-decoration: none; display: inline-flex; align-items: center; gap: .5rem; transition: all .25s;
+    }
+    .btn-g:hover { background: var(--neon); transform: translateY(-2px); box-shadow: 0 10px 28px rgba(37,211,102,.35); }
+    .btn-ghost {
+      background: transparent; color: var(--txt);
+      padding: .9rem 2rem; border-radius: 8px; font-weight: 600; font-size: .95rem;
+      text-decoration: none; border: 1px solid var(--bdr2); transition: all .25s;
+      display: inline-flex; align-items: center; gap: .5rem;
+    }
+    .btn-ghost:hover { border-color: var(--wa); color: var(--wa); }
+    .hero-pills {
+      display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 2.8rem;
+      animation: fadeUp 1s ease both;
+    }
+    .pill {
+      display: flex; align-items: center; gap: .5rem;
+      background: var(--surf); border: 1px solid var(--bdr2);
+      padding: .55rem 1.1rem; border-radius: 50px; font-size: .83rem; font-weight: 500; color: var(--mut);
+      transition: all .25s;
+    }
+    .pill:hover { border-color: var(--wa); color: var(--txt); }
+    .pill .dot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; }
+    .dot-g { background: var(--wa); box-shadow: 0 0 6px var(--wa); }
+    .dot-v { background: var(--sm-l); box-shadow: 0 0 6px var(--sm-l); }
+    .dot-a { background: var(--wt); box-shadow: 0 0 6px var(--wt); }
+
+    /* ══════════════════════════════
+       SHARED
+    ══════════════════════════════ */
+    section { padding: 5.5rem 2rem; }
+    .container { max-width: 1120px; margin: 0 auto; }
+    .sec-chip {
+      display: inline-block; font-size: .73rem; font-weight: 700; letter-spacing: 2px;
+      text-transform: uppercase; color: var(--wa);
+      background: rgba(37,211,102,.08); border: 1px solid rgba(37,211,102,.18);
+      padding: .25rem .8rem; border-radius: 50px; margin-bottom: .9rem;
+    }
+    .sec-title {
+      font-family: 'Clash Display', sans-serif;
+      font-size: clamp(1.8rem, 3.5vw, 2.7rem);
+      font-weight: 700; margin-bottom: .9rem; line-height: 1.15; letter-spacing: -.3px;
+    }
+    .sec-desc { color: var(--mut); font-size: 1rem; max-width: 520px; line-height: 1.8; }
+    .sec-head { margin-bottom: 3rem; }
+
+    /* ══════════════════════════════
+       SERVICES OVERVIEW
+    ══════════════════════════════ */
+    #services { background: var(--ink2); }
+    .svc-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; }
+    .svc-card {
+      background: var(--surf); border-radius: 18px;
+      border: 1px solid var(--bdr);
+      padding: 2.2rem; display: flex; flex-direction: column;
+      transition: all .3s; position: relative; overflow: hidden;
+    }
+    .svc-card::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+      transform: scaleX(0); transform-origin: left; transition: transform .4s ease;
+    }
+    .svc-card.wa::before  { background: linear-gradient(90deg, var(--wa), var(--wa-d)); }
+    .svc-card.wt::before  { background: linear-gradient(90deg, var(--wt), #F97316); }
+    .svc-card.sm::before  { background: linear-gradient(90deg, var(--sm), var(--sm-l)); }
+    .svc-card:hover { transform: translateY(-7px); }
+    .svc-card.wa:hover { border-color: rgba(37,211,102,.25); box-shadow: 0 20px 50px rgba(37,211,102,.08); }
+    .svc-card.wt:hover { border-color: rgba(245,158,11,.3); box-shadow: 0 20px 50px rgba(245,158,11,.1); }
+    .svc-card.sm:hover { border-color: rgba(124,58,237,.3); box-shadow: 0 20px 50px rgba(124,58,237,.1); }
+    .svc-card:hover::before { transform: scaleX(1); }
+    .svc-icon-box {
+      width: 54px; height: 54px; border-radius: 14px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.7rem; margin-bottom: 1.2rem; flex-shrink: 0;
+    }
+    .svc-icon-box.wa-bg { background: rgba(37,211,102,.12); }
+    .svc-icon-box.wt-bg { background: rgba(245,158,11,.12); }
+    .svc-icon-box.sm-bg { background: rgba(124,58,237,.12); }
+    .svc-status {
+      display: inline-block; font-size: .7rem; font-weight: 700;
+      padding: .2rem .65rem; border-radius: 50px; margin-bottom: .9rem;
+    }
+    .live-tag { background: rgba(37,211,102,.12); color: var(--wa); border: 1px solid rgba(37,211,102,.2); }
+    .soon-tag { background: rgba(245,158,11,.1); color: var(--wt); border: 1px solid rgba(245,158,11,.2); }
+    .svc-card h3 {
+      font-family: 'Clash Display', sans-serif;
+      font-size: 1.22rem; font-weight: 600; margin-bottom: .55rem; letter-spacing: -.2px;
+    }
+    .svc-card > p { color: var(--mut); font-size: .92rem; line-height: 1.75; margin-bottom: 1.1rem; }
+    .svc-list { list-style: none; flex: 1; margin-bottom: 1.3rem; }
+    .svc-list li { font-size: .87rem; color: var(--mut); padding: .3rem 0; display: flex; gap: .55rem; align-items: flex-start; }
+    .svc-list li .arr { flex-shrink: 0; margin-top: 2px; font-size: .8rem; }
+    .arr-g { color: var(--wa); }
+    .arr-a { color: var(--wt); }
+    .arr-v { color: var(--sm-l); }
+    .pain-box {
+      border-radius: 9px; padding: .75rem 1rem; margin-bottom: 1.2rem;
+      font-size: .82rem; line-height: 1.6;
+    }
+    .pain-box.wa-pain { background: rgba(37,211,102,.06); border: 1px solid rgba(37,211,102,.14); color: rgba(37,211,102,.75); }
+    .pain-box.wt-pain { background: rgba(245,158,11,.06); border: 1px solid rgba(245,158,11,.14); color: rgba(245,158,11,.8); }
+    .pain-box.sm-pain { background: rgba(124,58,237,.06); border: 1px solid rgba(124,58,237,.14); color: rgba(167,139,250,.8); }
+    .pain-box strong { font-style: normal; font-weight: 600; }
+    .svc-btn {
+      display: flex; align-items: center; justify-content: center; gap: .5rem;
+      padding: .8rem 1.4rem; border-radius: 9px; font-weight: 700; font-size: .88rem;
+      text-decoration: none; transition: all .25s; margin-top: auto; border: none; cursor: pointer;
+    }
+    .svc-btn.wa-btn { background: var(--wa); color: #000; }
+    .svc-btn.wa-btn:hover { background: var(--neon); box-shadow: 0 6px 22px rgba(37,211,102,.35); }
+    .svc-btn.wt-btn { background: var(--wt); color: #000; }
+    .svc-btn.wt-btn:hover { background: var(--wt-l); box-shadow: 0 6px 22px rgba(245,158,11,.35); }
+    .svc-btn.sm-btn { background: var(--sm); color: #fff; }
+    .svc-btn.sm-btn:hover { background: var(--sm-l); color: #000; box-shadow: 0 6px 22px rgba(124,58,237,.35); }
+
+    /* ══════════════════════════════
+       WHATSAPP PRICING
+    ══════════════════════════════ */
+    #wa-pricing { background: var(--ink); }
+    .wa-pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; max-width: 720px; }
+    .price-card {
+      border-radius: 20px; padding: 2.2rem;
+      position: relative; overflow: hidden;
+      transition: all .3s;
+    }
+    /* WA Basic */
+    .price-card.basic {
+      background: linear-gradient(145deg, #0F1F16, #132B1A);
+      border: 1px solid rgba(37,211,102,.2);
+    }
+    .price-card.basic:hover { transform: translateY(-6px); border-color: rgba(37,211,102,.4); box-shadow: 0 20px 50px rgba(37,211,102,.12); }
+    /* WA Standard */
+    .price-card.standard {
+      background: linear-gradient(145deg, #0D1F1A, #0F2A22);
+      border: 1px solid rgba(37,211,102,.35);
+    }
+    .price-card.standard:hover { transform: translateY(-6px); box-shadow: 0 20px 50px rgba(37,211,102,.18); }
+    .popular-ring {
+      position: absolute; top: -1px; left: -1px; right: -1px;
+      height: 3px; background: linear-gradient(90deg, var(--wa), var(--neon));
+      border-radius: 20px 20px 0 0;
+    }
+    .popular-pill {
+      position: absolute; top: 16px; right: 16px;
+      background: var(--wa); color: #000; font-size: .68rem; font-weight: 800;
+      padding: .22rem .7rem; border-radius: 50px; letter-spacing: .3px;
+    }
+    .price-service-label {
+      font-size: .7rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase;
+      color: var(--wa); margin-bottom: .4rem; opacity: .7;
+    }
+    .price-tier-name {
+      font-family: 'Clash Display', sans-serif;
+      font-size: 2rem; font-weight: 700; letter-spacing: -.3px; margin-bottom: .3rem;
+    }
+    .price-sub { font-size: .82rem; color: var(--mut); margin-bottom: 1.4rem; font-weight: 500; }
+    .price-main {
+      display: flex; align-items: baseline; gap: .2rem; margin-bottom: .35rem;
+    }
+    .price-currency { font-size: 1.3rem; font-weight: 700; color: var(--wa); margin-top: 4px; }
+    .price-amount {
+      font-family: 'Clash Display', sans-serif;
+      font-size: 3rem; font-weight: 700; color: var(--txt); line-height: 1; letter-spacing: -1px;
+    }
+    .price-period { font-size: .9rem; color: var(--mut); }
+    .price-note { font-size: .79rem; color: var(--mut); margin-bottom: 1.5rem; }
+    .price-highlight {
+      background: rgba(37,211,102,.1); border: 1px solid rgba(37,211,102,.18);
+      border-radius: 8px; padding: .7rem 1rem; margin-bottom: 1.4rem;
+      font-size: .84rem; font-weight: 600; color: var(--wa); text-align: center;
+    }
+    .price-feats { list-style: none; margin-bottom: 1.6rem; }
+    .price-feats li { font-size: .88rem; color: var(--mut); padding: .35rem 0; display: flex; gap: .6rem; align-items: flex-start; }
+    .price-feats li::before { content: '✓'; color: var(--wa); font-weight: 700; flex-shrink: 0; }
+    .price-cta {
+      display: flex; align-items: center; justify-content: center; gap: .5rem;
+      width: 100%; padding: .9rem; border-radius: 10px;
+      font-weight: 700; font-size: .9rem; text-decoration: none; transition: all .25s;
+      border: none; cursor: pointer;
+    }
+    .price-cta.solid { background: var(--wa); color: #000; }
+    .price-cta.solid:hover { background: var(--neon); box-shadow: 0 8px 24px rgba(37,211,102,.35); transform: translateY(-1px); }
+    .price-cta.outline { background: transparent; color: var(--wa); border: 1px solid rgba(37,211,102,.35); }
+    .price-cta.outline:hover { background: rgba(37,211,102,.08); }
+    .price-footer { text-align: center; margin-top: 1rem; font-size: .78rem; color: var(--mut); }
+
+    /* WeighTrack plans */
+    #wt-plans { background: var(--ink2); }
+    .wt-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.2rem; }
+    .wt-card {
+      background: var(--surf); border: 1px solid var(--bdr); border-radius: 16px;
+      padding: 1.7rem; transition: all .3s; position: relative;
+    }
+    .wt-card:hover { border-color: rgba(245,158,11,.3); transform: translateY(-5px); box-shadow: 0 15px 40px rgba(245,158,11,.09); }
+    .wt-card.wt-pop { border-color: rgba(245,158,11,.4); background: linear-gradient(145deg, var(--surf), rgba(245,158,11,.04)); }
+    .wt-pop-pill {
+      position: absolute; top: -12px; left: 50%; transform: translateX(-50%);
+      background: var(--wt); color: #000; font-size: .68rem; font-weight: 800;
+      padding: .22rem .9rem; border-radius: 50px; white-space: nowrap;
+    }
+    .wt-num { font-size: .8rem; font-weight: 700; color: var(--wt); margin-bottom: .3rem; opacity: .7; letter-spacing: 1px; text-transform: uppercase; }
+    .wt-name { font-family: 'Clash Display', sans-serif; font-size: 1.12rem; font-weight: 600; margin-bottom: .4rem; }
+    .wt-tag { font-size: .82rem; color: var(--mut); margin-bottom: .7rem; line-height: 1.5; }
+    .wt-target { font-size: .78rem; color: var(--wt); font-weight: 600; margin-bottom: 1rem; }
+    .wt-feats { list-style: none; margin-bottom: 1.3rem; }
+    .wt-feats li { font-size: .85rem; color: var(--mut); padding: .28rem 0; display: flex; gap: .5rem; align-items: flex-start; }
+    .wt-feats li::before { content: '✓'; color: var(--wt); font-weight: 700; flex-shrink: 0; }
+    .wt-btn {
+      display: block; text-align: center; border-radius: 9px;
+      padding: .68rem 1rem; font-weight: 700; font-size: .85rem;
+      text-decoration: none; transition: all .25s;
+      border: 1px solid rgba(245,158,11,.35); color: var(--wt);
+    }
+    .wt-btn:hover, .wt-card.wt-pop .wt-btn { background: var(--wt); color: #000; }
+
+    /* SMM pricing */
+    #smm-pricing { background: var(--ink); }
+    .smm-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
+    .smm-card {
+      border-radius: 20px; padding: 2.2rem; position: relative; overflow: hidden;
+      transition: all .3s;
+    }
+    .smm-card.smm-1 { background: linear-gradient(145deg, #0D1520, #111D2B); border: 1px solid rgba(124,58,237,.18); }
+    .smm-card.smm-2 { background: linear-gradient(145deg, #0F1525, #111D30); border: 1px solid rgba(124,58,237,.32); }
+    .smm-card.smm-3 { background: linear-gradient(145deg, #100F22, #141228); border: 1px solid rgba(124,58,237,.18); }
+    .smm-card:hover { transform: translateY(-7px); }
+    .smm-card.smm-1:hover { box-shadow: 0 20px 50px rgba(124,58,237,.12); }
+    .smm-card.smm-2:hover { border-color: rgba(124,58,237,.5); box-shadow: 0 20px 50px rgba(124,58,237,.18); }
+    .smm-card.smm-3:hover { box-shadow: 0 20px 50px rgba(124,58,237,.12); }
+    .smm-pop-ring { position: absolute; top: -1px; left: -1px; right: -1px; height: 3px; background: linear-gradient(90deg, var(--sm), var(--sm-l)); border-radius: 20px 20px 0 0; }
+    .smm-pop-pill { position: absolute; top: 16px; right: 16px; background: var(--sm); color: #fff; font-size: .68rem; font-weight: 800; padding: .22rem .7rem; border-radius: 50px; letter-spacing: .3px; }
+    .smm-label { font-size: .7rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--sm-l); margin-bottom: .4rem; opacity: .7; }
+    .smm-package { font-family: 'Clash Display', sans-serif; font-size: 2rem; font-weight: 700; letter-spacing: -.3px; margin-bottom: .2rem; }
+    .smm-tier { font-size: .9rem; font-weight: 600; margin-bottom: 1.3rem; }
+    .smm-tier.starter { color: var(--wa); }
+    .smm-tier.growth { color: #F97316; }
+    .smm-tier.pro { color: var(--wt-l); }
+    .smm-price-row { display: flex; align-items: baseline; gap: .2rem; margin-bottom: .3rem; }
+    .smm-curr { font-size: 1.3rem; font-weight: 700; color: var(--sm-l); margin-top: 4px; }
+    .smm-amount { font-family: 'Clash Display', sans-serif; font-size: 3rem; font-weight: 700; line-height: 1; letter-spacing: -1px; }
+    .smm-per { font-size: .9rem; color: var(--mut); }
+    .smm-note { font-size: .79rem; color: var(--mut); margin-bottom: 1.4rem; }
+    .smm-platform-badge {
+      background: rgba(124,58,237,.12); border: 1px solid rgba(124,58,237,.22);
+      border-radius: 8px; padding: .65rem 1rem; margin-bottom: 1.2rem;
+      font-size: .82rem; font-weight: 600; color: var(--sm-l); text-align: center;
+    }
+    .smm-posts-badge {
+      background: rgba(37,211,102,.07); border: 1px solid rgba(37,211,102,.14);
+      border-radius: 8px; padding: .65rem 1rem; margin-bottom: 1.4rem;
+      font-size: .82rem; color: var(--txt); text-align: center;
+    }
+    .smm-posts-badge strong { color: var(--wa); }
+    .smm-feats { list-style: none; margin-bottom: 1.6rem; }
+    .smm-feats li { font-size: .88rem; color: var(--mut); padding: .35rem 0; display: flex; gap: .6rem; align-items: flex-start; }
+    .smm-feats li::before { content: '✓'; color: var(--sm-l); font-weight: 700; flex-shrink: 0; }
+    .smm-cta {
+      display: flex; align-items: center; justify-content: center; gap: .5rem;
+      width: 100%; padding: .9rem; border-radius: 10px; font-weight: 700; font-size: .9rem;
+      text-decoration: none; transition: all .25s; border: none; cursor: pointer;
+    }
+    .smm-cta.solid { background: var(--sm); color: #fff; }
+    .smm-cta.solid:hover { background: var(--sm-l); color: #000; box-shadow: 0 8px 24px rgba(124,58,237,.35); transform: translateY(-1px); }
+    .smm-cta.outline { background: transparent; color: var(--sm-l); border: 1px solid rgba(124,58,237,.35); }
+    .smm-cta.outline:hover { background: rgba(124,58,237,.1); }
+    .smm-footer { text-align: center; margin-top: 1rem; font-size: .78rem; color: var(--mut); }
+
+    /* ══════════════════════════════
+       WHY / INDUSTRIES / TESTI
+    ══════════════════════════════ */
+    #why { background: var(--ink2); }
+    .why-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 1rem; margin-top: 3rem; }
+    .why-item { background: var(--surf); border: 1px solid var(--bdr); border-radius: 12px; padding: 1.3rem; transition: all .25s; }
+    .why-item:hover { border-color: rgba(37,211,102,.28); background: rgba(37,211,102,.03); }
+    .why-item h4 { font-weight: 600; margin-bottom: .35rem; font-size: .93rem; }
+    .why-item p { color: var(--mut); font-size: .85rem; line-height: 1.65; }
+
+    #industries { background: var(--ink); }
+    .ind-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(115px, 1fr)); gap: 1rem; margin-top: 3rem; }
+    .ind-item { background: var(--surf); border: 1px solid var(--bdr); border-radius: 12px; padding: 1rem .8rem; text-align: center; transition: all .25s; }
+    .ind-item:hover { border-color: rgba(37,211,102,.35); transform: translateY(-4px); }
+    .ind-item span { font-size: 1.8rem; display: block; margin-bottom: .4rem; }
+    .ind-item strong { font-size: .77rem; color: var(--mut); font-weight: 500; }
+
+    #testimonials { background: var(--ink2); }
+    .test-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 3rem; }
+    .test-card { background: var(--surf); border: 1px solid var(--bdr); border-radius: 18px; padding: 1.9rem; transition: all .25s; }
+    .test-card:hover { border-color: var(--bdr2); transform: translateY(-4px); }
+    .stars { color: #F59E0B; font-size: .88rem; margin-bottom: .9rem; letter-spacing: 2px; }
+    .test-text { color: var(--mut); font-size: .93rem; line-height: 1.8; margin-bottom: 1.2rem; font-style: italic; }
+    .test-author { display: flex; align-items: center; gap: .8rem; }
+    .av { width: 40px; height: 40px; border-radius: 50%; background: linear-gradient(135deg, var(--wa), var(--wa-d)); display: flex; align-items: center; justify-content: center; font-size: .95rem; font-weight: 700; color: #000; font-family: 'Clash Display', sans-serif; flex-shrink: 0; }
+    .av-name { font-weight: 600; font-size: .9rem; }
+    .av-biz { font-size: .78rem; color: var(--mut); }
+
+    /* ══════════════════════════════
+       CONTACT
+    ══════════════════════════════ */
+    #contact { background: var(--ink); }
+    .contact-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; margin-top: 3rem; }
+    .contact-info > p { color: var(--mut); line-height: 1.8; margin-bottom: 2rem; }
+    .c-details { display: flex; flex-direction: column; gap: .9rem; }
+    .c-item { display: flex; align-items: center; gap: 1rem; padding: .9rem 1.2rem; background: var(--surf); border: 1px solid var(--bdr); border-radius: 10px; }
+    .c-icon { font-size: 1.3rem; flex-shrink: 0; }
+    .c-lbl { font-size: .73rem; color: var(--mut); margin-bottom: .1rem; }
+    .c-val { font-size: .92rem; font-weight: 500; }
+    .c-actions { display: flex; flex-direction: column; gap: 1rem; justify-content: center; }
+    .c-wa { background: var(--wa); color: #000; padding: 1.1rem 1.8rem; border-radius: 10px; font-weight: 700; font-size: .95rem; text-decoration: none; text-align: center; display: flex; align-items: center; justify-content: center; gap: .6rem; transition: all .25s; }
+    .c-wa:hover { background: var(--neon); transform: translateY(-2px); box-shadow: 0 10px 28px rgba(37,211,102,.35); }
+    .c-mail { background: transparent; color: var(--txt); padding: 1.1rem 1.8rem; border-radius: 10px; font-weight: 600; font-size: .95rem; text-decoration: none; text-align: center; border: 1px solid var(--bdr2); display: flex; align-items: center; justify-content: center; gap: .6rem; transition: all .25s; }
+    .c-mail:hover { border-color: var(--wa); color: var(--wa); }
+    .c-note { text-align: center; color: var(--mut); font-size: .82rem; }
+
+    /* FOOTER */
+    footer { background: var(--ink2); border-top: 1px solid var(--bdr); padding: 2.2rem; text-align: center; color: var(--mut); font-size: .85rem; }
+    footer a { color: var(--wa); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+    footer strong { color: var(--txt); }
+
+    /* FLOAT */
+    .wa-float {
+      position: fixed; bottom: 2rem; right: 2rem; z-index: 999;
+      width: 60px; height: 60px; border-radius: 50%;
+      background: var(--wa); display: flex; align-items: center; justify-content: center;
+      font-size: 1.7rem; text-decoration: none;
+      box-shadow: 0 4px 24px rgba(37,211,102,.6);
+      animation: pulse-wa 2.5s infinite; transition: transform .2s;
+    }
+    .wa-float:hover { transform: scale(1.12); }
+
+    @keyframes pulse-wa {
+      0%,100% { box-shadow: 0 4px 24px rgba(37,211,102,.5); }
+      50% { box-shadow: 0 4px 48px rgba(37,211,102,.9); }
+    }
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+      .contact-wrap { grid-template-columns: 1fr; gap: 2rem; }
+      nav { padding: .9rem 1.2rem; }
+      section { padding: 3.5rem 1.2rem; }
+      .wa-pricing-grid { max-width: 100%; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="logo">Sreeni<span>verse</span></a>
+  <ul class="nav-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#wa-pricing">WhatsApp Plans</a></li>
+    <li><a href="#wt-plans">WeighTrack</a></li>
+    <li><a href="#smm-pricing">Social Media</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="https://wa.me/919347488883?text=Hi%20Sreeni%2C%20I%20want%20a%20free%20consultation!" class="nav-cta" target="_blank">💬 Free Consultation</a>
+  <div class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
+</nav>
+<div class="mob-menu" id="mobMenu">
+  <a href="#services" onclick="closeMenu()">Services</a>
+  <a href="#wa-pricing" onclick="closeMenu()">WhatsApp Plans</a>
+  <a href="#wt-plans" onclick="closeMenu()">WeighTrack</a>
+  <a href="#smm-pricing" onclick="closeMenu()">Social Media</a>
+  <a href="#contact" onclick="closeMenu()">Contact</a>
+  <a href="https://wa.me/919347488883?text=Hi%20Sreeni%2C%20I%20want%20a%20free%20consultation!" target="_blank">💬 WhatsApp Us</a>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-dots"></div>
+  <div class="hero-content">
+    <div class="hero-badge">🚀 Hyderabad's Smart Automation Partner</div>
+    <h1>Automate Your Business.<br><span class="g">Grow Without the Chaos.</span></h1>
+    <p class="hero-en">WhatsApp Automation · Legal Metrology (WeighTrack) · Social Media Management — all under one roof.</p>
+    <p class="hero-te">మీ business ని next level కి తీసుకెళ్దాం — Telugu & English support తో.</p>
+    <div class="hero-btns">
+      <a href="https://wa.me/919347488883?text=Hi%20Sreeni%2C%20I%20want%20a%20free%20consultation%20for%20my%20business!" class="btn-g" target="_blank">💬 Get Free Consultation</a>
+      <a href="#services" class="btn-ghost">Explore Services →</a>
+    </div>
+    <div class="hero-pills">
+      <div class="pill"><span class="dot dot-g"></span> WhatsApp Automation — Live</div>
+      <div class="pill"><span class="dot dot-a"></span> WeighTrack — Building Now</div>
+      <div class="pill"><span class="dot dot-v"></span> Social Media Management</div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES OVERVIEW -->
+<section id="services">
+  <div class="container">
+    <div class="sec-head">
+      <div class="sec-chip">What We Do</div>
+      <h2 class="sec-title">Three Services.<br>One Smart Partner.</h2>
+      <p class="sec-desc">మీకు right solution — WhatsApp automation నుండి legal compliance వరకు, social media management వరకు.</p>
+    </div>
+    <div class="svc-grid">
+
+      <div class="svc-card wa">
+        <div class="svc-icon-box wa-bg">💬</div>
+        <span class="svc-status live-tag">✅ Live & Running</span>
+        <h3>WhatsApp Business Automation</h3>
+        <p>AI-powered chatbots that handle customer inquiries 24/7. Never miss a lead — even at 3 AM.</p>
+        <ul class="svc-list">
+          <li><span class="arr arr-g">→</span>Automated replies for timings, pricing & bookings</li>
+          <li><span class="arr arr-g">→</span>Telugu & English multi-language support</li>
+          <li><span class="arr arr-g">→</span>Lead capture & follow-up automation</li>
+          <li><span class="arr arr-g">→</span>Appointment booking through WhatsApp</li>
+          <li><span class="arr arr-g">→</span>Payment link sending & reminders</li>
+        </ul>
+        <div class="pain-box wa-pain"><strong>Pain eliminated:</strong> Missing leads, manual follow-ups, after-hours silence</div>
+        <a href="#wa-pricing" class="svc-btn wa-btn">View Plans & Pricing →</a>
+      </div>
+
+      <div class="svc-card wt">
+        <div class="svc-icon-box wt-bg">⚖️</div>
+        <span class="svc-status soon-tag">🔧 SaaS — Building Now</span>
+        <h3>WeighTrack — Legal Metrology Engine</h3>
+        <p>Purpose-built for weighing machine dealers. Renewal tracking, voucher lifecycle, payment intelligence — all on WhatsApp autopilot.</p>
+        <ul class="svc-list">
+          <li><span class="arr arr-a">→</span>Dealer data upload → auto renewal due dates</li>
+          <li><span class="arr arr-a">→</span>30/15/7/1 day WhatsApp alerts to dealer & clients</li>
+          <li><span class="arr arr-a">→</span>Voucher lifecycle: sent → verified → approved</li>
+          <li><span class="arr arr-a">→</span>Payment state: Full / Half / Pending per machine</li>
+          <li><span class="arr arr-a">→</span>Boss dashboard — one screen, full picture</li>
+        </ul>
+        <div class="pain-box wt-pain"><strong>Pain eliminated:</strong> Folder searching, missed renewals, repeated RI calls, payment confusion</div>
+        <a href="#wt-plans" class="svc-btn wt-btn">View WeighTrack Plans →</a>
+      </div>
+
+      <div class="svc-card sm">
+        <div class="svc-icon-box sm-bg">📱</div>
+        <span class="svc-status soon-tag">🔧 Tool Coming Soon</span>
+        <h3>Social Media Management</h3>
+        <p>Done-for-you social media + auto posting tool. We create, manage & post to all platforms — Reels & Shorts included.</p>
+        <ul class="svc-list">
+          <li><span class="arr arr-v">→</span>Instagram, Facebook, YouTube, LinkedIn, X</li>
+          <li><span class="arr arr-v">→</span>Reels & Shorts video creation included</li>
+          <li><span class="arr arr-v">→</span>AI captions & hashtags — Telugu & English</li>
+          <li><span class="arr arr-v">→</span>Scheduled posting, monthly analytics</li>
+          <li><span class="arr arr-v">→</span>WhatsApp broadcast integration</li>
+        </ul>
+        <div class="pain-box sm-pain"><strong>Pain eliminated:</strong> Daily posting burden, inconsistent presence, platform switching</div>
+        <a href="#smm-pricing" class="svc-btn sm-btn">View SMM Packages →</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- WHATSAPP BOT PRICING -->
+<section id="wa-pricing">
+  <div class="container">
+    <div class="sec-head">
+      <div class="sec-chip">WhatsApp Bot Service</div>
+      <h2 class="sec-title">WhatsApp Automation Plans</h2>
+      <p class="sec-desc">మీ business size కి perfect plan — setup FREE, no installation charges on Standard.</p>
+    </div>
+    <div class="wa-pricing-grid">
+
+      <!-- BASIC -->
+      <div class="price-card basic">
+        <div class="price-service-label">WhatsApp Bot Service</div>
+        <div class="price-tier-name">BASIC</div>
+        <div class="price-sub">🤖 Basic Bot</div>
+        <div class="price-main">
+          <span class="price-currency">₹</span>
+          <span class="price-amount">1,199</span>
+          <span class="price-period">/month</span>
+        </div>
+        <div class="price-note">Installation: ₹500 &nbsp;|&nbsp; 3 Months: ₹3,399 (with installation)</div>
+        <div class="price-highlight">💬 WhatsApp Auto-Reply System</div>
+        <div class="price-highlight" style="background:rgba(37,211,102,.06);">📨 200 Messages / Day</div>
+        <ul class="price-feats">
+          <li>Auto-reply system</li>
+          <li>Lead capture</li>
+          <li>200 messages per day</li>
+          <li>Email support</li>
+        </ul>
+        <a href="https://wa.me/919347488883?text=Hi%20Sreeni%2C%20I%27m%20interested%20in%20the%20WhatsApp%20BASIC%20plan%20%E2%82%B91%2C199%2Fmonth!" class="price-cta outline" target="_blank">💬 Get Basic Plan</a>
+        <p class="price-footer">✅ Perfect for Small Businesses</p>
+      </div>
+
+      <!-- STANDARD -->
+      <div class="price-card standard">
+        <div class="popular-ring"></div>
+        <div class="popular-pill">⭐ Popular</div>
+        <div class="price-service-label">WhatsApp Bot Service</div>
+        <div class="price-tier-name">STANDARD</div>
+        <div class="price-sub">🚀 Standard Bot — Popular</div>
+        <div class="price-main">
+          <span class="price-currency">₹</span>
+          <span class="price-amount">1,699</span>
+          <span class="price-period">/month</span>
+        </div>
+        <div class="price-note">Setup: FREE &nbsp;|&nbsp; 3 Months: ₹4,999 (NO installation charges)</div>
+        <div class="price-highlight">🤖 WhatsApp Smart Bot System</div>
+        <div class="price-highlight" style="background:rgba(37,211,102,.06);">♾️ Unlimited Features</div>
+        <ul class="price-feats">
+          <li>Everything in Basic +</li>
+          <li>Dashboard analytics</li>
+          <li>Template library</li>
+          <li>Custom integrations</li>
+          <li>Priority support</li>
+        </ul>
+        <a href="https://wa.me/919347488883?text=Hi%20Sreeni%2C%20I%27m%20interested%20in%20the%20WhatsApp%20STANDARD%20plan%20%E2%82%B91%2C699%2Fmonth!" class="price-cta solid" target="_blank">💬 Get Standard Plan</a>
+        <p class="price-footer">✅ Best for Growing Businesses</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- WEIGHTRACK PLANS -->
+<section id="wt-plans">
+  <div class="container">
+    <div class="sec-head">
+      <div class="sec-chip" style="color:var(--wt);background:rgba(245,158,11,.08);border-color:rgba(245,158,11,.2);">WeighTrack — Legal Metrology</div>
+      <h2 class="sec-title">Choose Your WeighTrack Plan</h2>
+      <p class="sec-desc">Small dealer నుండి large operation వరకు — మీ size కి match అయ్యే plan. Pricing via consultation.</p>
+    </div>
+    <div class="wt-grid">
+
+      <div class="wt-card">
+        <div class="wt-num">Plan 01</div>
+        <div class="wt-name">Excel Intelligence</div>
+        <div class="wt-tag">మీ existing Excel తీసుకుని smart చేస్తాం</div>
+        <div class="wt-target">🎯 Semi-organised dealers · Easy entry</div>
+        <ul class="wt-feats">
+          <li>Auto due date calculation</li>
+          <li>Renewal status column</li>
+          <li>Red / Amber / Green formatting</li>
+          <li>Basic summary dashboard</li>
+          <li>No new software needed</li>
+        </ul>
+        <a href="https://wa.me/919347488883?text=Hi%20Sreeni%2C%20I%27m%20interested%20in%20WeighTrack%20Excel%20Intelligence%20plan!" class="wt-btn" target="_blank">💬 Enquire Now</a>
+      </div>
+
+      <div class="wt-card wt-pop">
+        <div class="wt-pop-pill">⭐ Most Popular</div>
+        <div class="wt-num">Plan 02</div>
+        <div class="wt-name">Renewal Control Dashboard</div>
+        <div class="wt-tag">Full web panel — machine master & auto renewal engine</div>
+        <div class="wt-target">🎯 Growing dealers · 1000+ machines</div>
+        <ul class="wt-feats">
+          <li>Machine master database</li>
+          <li>Auto renewal engine</li>
+          <li>Voucher lifecycle tracking</li>
+          <li>Payment status per machine</li>
+          <li>Boss view — one screen</li>
+          <li>WhatsApp alerts included</li>
+        </ul>
+        <a href="https://wa.me/919347488883?text=Hi%20Sreeni%2C%20I%27m%20interested%20in%20WeighTrack%20Renewal%20Control%20Dashboard!" class="wt-btn" target="_blank">💬 Enquire Now</a>
+      </div>
+
+      <div class="wt-card">
+        <div class="wt-num">Plan 03</div>
+        <div class="wt-name">Reminder Automation</div>
+        <div class="wt-tag">Automation layer only — reminders on complete autopilot</div>
+        <div class="wt-target">🎯 Busy dealers · Small entry, easy upsell</div>
+        <ul class="wt-feats">
+          <li>30-day before renewal WhatsApp alert</li>
+          <li>Pending payment reminders</li>
+          <li>Monthly summary report</li>
+          <li>Easy upgrade to full dashboard</li>
+        </ul>
+        <a href="https://wa.me/919347488883?text=Hi%20Sreeni%2C%20I%27m%20interested%20in%20WeighTrack%20Reminder%20Automation!" class="wt-btn" target="_blank">💬 Enquire Now</a>
+      </div>
+
+      <div class="wt-card">
+        <div class="wt-num">Plan 04</div>
+        <div class="wt-name">Operational Audit</div>
+        <div class="wt-tag">Full workflow audit + restructuring + SOP creation</div>
+        <div class="wt-target">🎯 Mid-size dealers · High-ticket one-time project</div>
+        <ul class="wt-feats">
+          <li>Current workflow audit</li>
+          <li>Process restructuring</li>
+          <li>Data centralisation setup</li>
+          <li>SOP creation & documentation</li>
+        </ul>
+        <a href="https://wa.me/919347488883?text=Hi%20Sreeni%2C%20I%27m%20interested%20in%20WeighTrack%20Operational%20Audit!" class="wt-btn" target="_blank">💬 Enquire Now</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- SMM PRICING -->
+<section id="smm-pricing">
+  <div class="container">
+    <div class="sec-head">
+      <div class="sec-chip" style="color:var(--sm-l);background:var(--sm-bg);border-color:rgba(124,58,237,.2);">Social Media Management</div>
+      <h2 class="sec-title">Social Media Packages</h2>
+      <p class="sec-desc">Professional content creation, posting & management — Reels, Shorts, Images — done for you in Telugu & English.</p>
+    </div>
+    <div class="smm-grid">
+
+      <!-- Package 1 -->
+      <div class="smm-card smm-1">
+        <div class="smm-label">Social Media Management</div>
+        <div class="smm-package">PACKAGE 1</div>
+        <div class="smm-tier starter">🌱 STARTER</div>
+        <div class="smm-price-row">
+          <span class="smm-curr">₹</span>
+          <span class="smm-amount">5,000</span>
+        </div>
+        <div class="smm-note">First Month &nbsp;|&nbsp; ₹3,500/month after</div>
+        <div class="smm-platform-badge">📲 Facebook + Instagram</div>
+        <div class="smm-posts-badge">📋 <strong>10 Posts / Month</strong> &nbsp;·&nbsp; 6 Images + 4 Videos</div>
+        <ul class="smm-feats">
+          <li>Professional templates</li>
+          <li>Video editing included</li>
+          <li>Captions + Hashtags</li>
+          <li>2 posts per week</li>
+          <li>Monthly analytics report</li>
+        </ul>
+        <a href="https://wa.me/919347488883?text=Hi%20Sreeni%2C%20I%27m%20interested%20in%20SMM%20Package%201%20%E2%80%94%20Starter%20%E2%82%B95%2C000!" class="smm-cta outline" target="_blank">💬 Get Package 1</a>
+        <p class="smm-footer">✅ Perfect for Small Businesses</p>
+      </div>
+
+      <!-- Package 2 -->
+      <div class="smm-card smm-2">
+        <div class="smm-pop-ring"></div>
+        <div class="smm-pop-pill">🔥 Most Popular</div>
+        <div class="smm-label">Social Media Management</div>
+        <div class="smm-package">PACKAGE 2</div>
+        <div class="smm-tier growth">🔥 GROWTH — MOST POPULAR</div>
+        <div class="smm-price-row">
+          <span class="smm-curr">₹</span>
+          <span class="smm-amount">7,000</span>
+        </div>
+        <div class="smm-note">First Month &nbsp;|&nbsp; ₹6,000/month after</div>
+        <div class="smm-platform-badge">📲 FB + IG + YouTube</div>
+        <div class="smm-posts-badge">📋 <strong>16 Posts / Month</strong> &nbsp;·&nbsp; 8 Images + 8 Videos/Reels</div>
+        <ul class="smm-feats">
+          <li>Professional templates</li>
+          <li>Reels / Shorts editing</li>
+          <li>AI-generated captions</li>
+          <li>Trending hashtags</li>
+          <li>Weekly analytics report</li>
+        </ul>
+        <a href="https://wa.me/919347488883?text=Hi%20Sreeni%2C%20I%27m%20interested%20in%20SMM%20Package%202%20%E2%80%94%20Growth%20%E2%82%B97%2C000!" class="smm-cta solid" target="_blank">💬 Get Package 2</a>
+        <p class="smm-footer">✅ Best for Restaurants & Gyms</p>
+      </div>
+
+      <!-- Package 3 -->
+      <div class="smm-card smm-3">
+        <div class="smm-label">Social Media Management</div>
+        <div class="smm-package">PACKAGE 3</div>
+        <div class="smm-tier pro">👑 PRO — PREMIUM</div>
+        <div class="smm-price-row">
+          <span class="smm-curr">₹</span>
+          <span class="smm-amount">10,000</span>
+        </div>
+        <div class="smm-note">First Month &nbsp;|&nbsp; ₹8,500/month after</div>
+        <div class="smm-platform-badge">📲 FB + IG + YouTube + LinkedIn + Twitter</div>
+        <div class="smm-posts-badge">📋 <strong>20+ Posts / Month</strong> &nbsp;·&nbsp; 12 Images + 8 Videos/Reels</div>
+        <ul class="smm-feats">
+          <li>Full video production</li>
+          <li>5 platform coverage</li>
+          <li>Daily posting</li>
+          <li>Community management</li>
+          <li>Priority support</li>
+        </ul>
+        <a href="https://wa.me/919347488883?text=Hi%20Sreeni%2C%20I%27m%20interested%20in%20SMM%20Package%203%20%E2%80%94%20Pro%20%E2%82%B910%2C000!" class="smm-cta outline" target="_blank">💬 Get Package 3</a>
+        <p class="smm-footer">✅ For Established Businesses</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section id="why">
+  <div class="container">
+    <div class="sec-head">
+      <div class="sec-chip">Why Sreeniverse</div>
+      <h2 class="sec-title">Built for Telugu Businesses.</h2>
+      <p class="sec-desc">Generic SaaS కాదు — మీ local language, compliance, needs అర్థమయ్యే team.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-item"><h4>🗣️ Telugu & English Support</h4><p>Bots and dashboards in your customer's language — naturally.</p></div>
+      <div class="why-item"><h4>⚖️ Legal Metrology Experts</h4><p>Weights & measures compliance — no fines, no last-minute panic.</p></div>
+      <div class="why-item"><h4>💬 WhatsApp-First Approach</h4><p>Reminders, alerts, leads — through WhatsApp where clients already are.</p></div>
+      <div class="why-item"><h4>📊 Boss Dashboard</h4><p>One screen. Full picture. No more calling staff for status updates.</p></div>
+      <div class="why-item"><h4>⚡ 24/7 Automation</h4><p>Bots handle enquiries even on holidays — your business never sleeps.</p></div>
+      <div class="why-item"><h4>📱 Social Media Done-For-You</h4><p>We post, manage & grow your pages — you focus on growth.</p></div>
+      <div class="why-item"><h4>🔔 Smart Renewal Alerts</h4><p>30/15/7/1 day reminders sent automatically — zero manual tracking.</p></div>
+      <div class="why-item"><h4>📈 Real Results</h4><p>3x lead increase, zero missed renewals, 10+ hours saved per week.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- INDUSTRIES -->
+<section id="industries">
+  <div class="container">
+    <div class="sec-head">
+      <div class="sec-chip">Who We Serve</div>
+      <h2 class="sec-title">Industries We Serve</h2>
+      <p class="sec-desc">Hyderabad & Telangana అంతటా — every sector కి right automation.</p>
+    </div>
+    <div class="ind-grid">
+      <div class="ind-item"><span>⚖️</span><strong>Weighing Dealers</strong></div>
+      <div class="ind-item"><span>🏋️</span><strong>Fitness & Gyms</strong></div>
+      <div class="ind-item"><span>🏠</span><strong>Real Estate</strong></div>
+      <div class="ind-item"><span>🍕</span><strong>Restaurants</strong></div>
+      <div class="ind-item"><span>🏥</span><strong>Healthcare</strong></div>
+      <div class="ind-item"><span>🎓</span><strong>Education</strong></div>
+      <div class="ind-item"><span>🛒</span><strong>Retail</strong></div>
+      <div class="ind-item"><span>🏢</span><strong>Corporates</strong></div>
+      <div class="ind-item"><span>🏪</span><strong>SMEs</strong></div>
+      <div class="ind-item"><span>💻</span><strong>IT Services</strong></div>
+      <div class="ind-item"><span>🚗</span><strong>Automotive</strong></div>
+      <div class="ind-item"><span>📦</span><strong>Logistics</strong></div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials">
+  <div class="container">
+    <div class="sec-head">
+      <div class="sec-chip">Client Love</div>
+      <h2 class="sec-title">What Our Clients Say</h2>
+      <p class="sec-desc">Real businesses, real results — Hyderabad & Telangana నుండి.</p>
+    </div>
+    <div class="test-grid">
+      <div class="test-card">
+        <div class="stars">★★★★★</div>
+        <p class="test-text">"WeighTrack valla maa dealer operation completely change ayyindi. Missed renewals zero — boss oka screen lo anni chustunnadu. Sreeni garu chaala responsive గా ఉన్నారు!"</p>
+        <div class="test-author">
+          <div class="av">R</div>
+          <div><div class="av-name">Ravi Kumar</div><div class="av-biz">Weighing Machine Dealer, Hyderabad</div></div>
+        </div>
+      </div>
+      <div class="test-card">
+        <div class="stars">★★★★★</div>
+        <p class="test-text">"WhatsApp Standard plan tho maa gym enquiries 40% increase ayyayi. Telugu lo reply vastundi — customers happy ga unnaru. Night ki kuda leads vastunnayi!"</p>
+        <div class="test-author">
+          <div class="av">P</div>
+          <div><div class="av-name">Priya Reddy</div><div class="av-biz">FitZone Gym, Secunderabad</div></div>
+        </div>
+      </div>
+      <div class="test-card">
+        <div class="stars">★★★★★</div>
+        <p class="test-text">"SMM Package 2 tho maa restaurant social media completely transform ayyindi. Reels editing, captions anni chestunnaru — nenu business ki focus chestunaanu!"</p>
+        <div class="test-author">
+          <div class="av">A</div>
+          <div><div class="av-name">Arjun Sharma</div><div class="av-biz">Restaurant Owner, Banjara Hills</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <div class="sec-head">
+      <div class="sec-chip">Get In Touch</div>
+      <h2 class="sec-title">Let's Start Your<br>Automation Journey</h2>
+    </div>
+    <div class="contact-wrap">
+      <div class="contact-info">
+        <p>Free consultation for all new businesses. WhatsApp us right now — we typically reply within 5 minutes during business hours. Telugu లో కూడా మాట్లాడవచ్చు! 🙏</p>
+        <div class="c-details">
+          <div class="c-item"><div class="c-icon">👤</div><div><div class="c-lbl">Founder</div><div class="c-val">Dandiga Sreenivas (Sreeni)</div></div></div>
+          <div class="c-item"><div class="c-icon">📱</div><div><div class="c-lbl">Phone / WhatsApp</div><div class="c-val">+91 93474 88883</div></div></div>
+          <div class="c-item"><div class="c-icon">✉️</div><div><div class="c-lbl">Email</div><div class="c-val">sreeni.aitech.automations@gmail.com</div></div></div>
+          <div class="c-item"><div class="c-icon">📍</div><div><div class="c-lbl">Location</div><div class="c-val">Yamjal, RR District, Hyderabad, Telangana</div></div></div>
+        </div>
+      </div>
+      <div class="c-actions">
+        <a href="https://wa.me/919347488883?text=Hi%20Sreeni%2C%20I%20want%20a%20free%20consultation%20for%20my%20business!" class="c-wa" target="_blank">💬 Chat on WhatsApp</a>
+        <a href="mailto:sreeni.aitech.automations@gmail.com?subject=Business%20Inquiry%20%E2%80%94%20Sreeniverse" class="c-mail">✉️ Send Email</a>
+        <p class="c-note">⚡ Usually replies within 5 minutes · Telugu & English</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 <strong>Sreeniverse Technologies</strong> · Hyderabad, Telangana</p>
+  <p style="margin-top:.6rem;">
+    <a href="https://wa.me/919347488883">+91 93474 88883</a>
+    &nbsp;·&nbsp;
+    <a href="mailto:sreeni.aitech.automations@gmail.com">sreeni.aitech.automations@gmail.com</a>
+    &nbsp;·&nbsp;
+    <a href="https://sreeniverse.com">sreeniverse.com</a>
+  </p>
+</footer>
+
+<!-- FLOATING WHATSAPP -->
+<a href="https://wa.me/919347488883?text=Hi%20Sreeni%2C%20I%27m%20interested%20in%20your%20services!" class="wa-float" target="_blank" aria-label="Chat on WhatsApp">💬</a>
+
+<script>
+  function toggleMenu() { document.getElementById('mobMenu').classList.toggle('open'); }
+  function closeMenu()  { document.getElementById('mobMenu').classList.remove('open'); }
+  document.addEventListener('click', e => {
+    if (!e.target.closest('nav') && !e.target.closest('#mobMenu')) closeMenu();
+  });
+</script>
+</body>
+</html>
