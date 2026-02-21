@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sreeniverse — Smart Automation for Hyderabad Businesses</title>
+<meta name="description" content="WhatsApp Automation, WeighTrack Legal Metrology Software & Social Media Management for Hyderabad businesses. Telugu & English support. Free consultation.">
+<meta name="keywords" content="WhatsApp automation Hyderabad, Legal Metrology software Telangana, WeighTrack renewal engine, weighing machine dealer software, social media management Hyderabad">
+<meta property="og:title" content="Sreeniverse — Stop Losing Renewals. Stop Missing Leads.">
+<meta property="og:description" content="Smart automation for Hyderabad businesses. WhatsApp bots, WeighTrack & Social Media — all in one place. Free consultation.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://sreeniverse.com">
+<meta property="og:image" content="https://sreeniverse.com/preview.jpg">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+:root{
+  --bg:#080810;
+  --bg2:#0c0c18;
+  --surf:#111122;
+  --surf2:#161630;
+  --card:#1a1a35;
+  --bdr:rgba(255,255,255,0.06);
+  --bdr2:rgba(255,255,255,0.12);
+  --txt:#f0f0ff;
+  --mut:#5a5a80;
+  --mut2:#8888aa;
+  --g:#00ff88;
+  --gd:#00cc66;
+  --a:#ffaa00;
+  --ad:#cc8800;
+  --v:#aa88ff;
+  --vd:#7755cc;
+  --r:#ff4466;
+  --disp:'Bebas Neue',sans-serif;
+  --body:'Plus Jakarta Sans',sans-serif;
+}
+html{scroll-behavior:smooth;}
+body{font-family:var(--body);background:var(--bg);color:var(--txt);overflow-x:hidden;line-height:1.6;}
+
+/* CURSOR */
+*{cursor:none!important;}
+.cur{position:fixed;width:10px;height:10px;background:var(--g);border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);transition:transform .1s,background .2s;mix-blend-mode:screen;}
+.cur2{position:fixed;width:36px;height:36px;border:1px solid rgba(0,255,136,.3);border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:all .18s ease;}
+
+/* NOISE */
+body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:9000;opacity:.035;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");}
+
+/* NAV */
+nav{position:fixed;top:0;width:100%;z-index:500;padding:.9rem 4%;display:flex;justify-content:space-between;align-items:center;background:rgba(8,8,16,.8);backdrop-filter:blur(28px);border-bottom:1px solid var(--bdr);}
+.logo{font-family:var(--disp);font-size:1.8rem;letter-spacing:2px;color:var(--txt);text-decoration:none;}
+.logo span{color:var(--g);}
+.nav-links{display:flex;gap:2.2rem;list-style:none;align-items:center;}
+.nav-links a{color:var(--mut2);text-decoration:none;font-size:.85rem;font-weight:500;letter-spacing:.3px;transition:color .2s;}
+.nav-links a:hover{color:var(--txt);}
+.nav-cta{background:var(--g)!important;color:#000!important;padding:.5rem 1.4rem;border-radius:6px;font-weight:700!important;font-size:.82rem!important;transition:all .2s!important;}
+.nav-cta:hover{background:#00ffaa!important;transform:translateY(-1px);box-shadow:0 8px 24px rgba(0,255,136,.35)!important;}
+.burger{display:none;flex-direction:column;gap:5px;}
+.burger span{width:22px;height:2px;background:var(--txt);border-radius:2px;display:block;transition:all .3s;}
+.mob{display:none;position:fixed;top:61px;left:0;right:0;z-index:499;background:rgba(8,8,16,.97);backdrop-filter:blur(20px);border-bottom:1px solid var(--bdr);padding:1.5rem;flex-direction:column;gap:.9rem;}
+.mob.on{display:flex;}
+.mob a{color:var(--txt);text-decoration:none;font-size:.95rem;font-weight:500;padding:.5rem 0;border-bottom:1px solid var(--bdr);}
+
+/* HERO */
+.hero{min-height:100vh;display:flex;align-items:center;padding:110px 4% 80px;position:relative;overflow:hidden;}
+.hero-canvas{position:absolute;inset:0;pointer-events:none;}
+canvas{position:absolute;inset:0;width:100%;height:100%;opacity:.4;}
+.hero-glow{position:absolute;inset:0;background:radial-gradient(ellipse 50% 60% at 20% 60%,rgba(0,255,136,.07) 0%,transparent 60%),radial-gradient(ellipse 40% 40% at 80% 20%,rgba(170,136,255,.06) 0%,transparent 60%),radial-gradient(ellipse 30% 30% at 65% 80%,rgba(255,170,0,.05) 0%,transparent 55%);pointer-events:none;}
+.hero-inner{position:relative;z-index:2;max-width:1200px;margin:0 auto;width:100%;display:grid;grid-template-columns:1.1fr 1fr;gap:5rem;align-items:center;}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:.6rem;background:rgba(0,255,136,.07);border:1px solid rgba(0,255,136,.18);color:var(--g);font-size:.72rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:.35rem 1rem;border-radius:50px;margin-bottom:2rem;animation:riseIn .6s ease both;}
+.dot-live{width:7px;height:7px;border-radius:50%;background:var(--g);animation:liveDot 2s infinite;}
+@keyframes liveDot{0%,100%{opacity:1;transform:scale(1);}50%{opacity:.4;transform:scale(1.5);}}
+h1{font-family:var(--disp);font-size:clamp(4rem,7vw,7rem);line-height:.95;letter-spacing:3px;margin-bottom:1.6rem;animation:riseIn .6s ease .1s both;}
+h1 .line2{display:block;color:var(--g);-webkit-text-stroke:0px;text-shadow:0 0 60px rgba(0,255,136,.5);}
+h1 .line3{display:block;color:var(--a);}
+.hero-desc{font-size:1.05rem;color:var(--mut2);max-width:460px;line-height:1.85;margin-bottom:.7rem;font-weight:300;animation:riseIn .6s ease .2s both;}
+.hero-te{font-size:.9rem;color:rgba(0,255,136,.5);font-style:italic;margin-bottom:2.2rem;animation:riseIn .6s ease .25s both;}
+.hero-btns{display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:3rem;animation:riseIn .6s ease .3s both;}
+.btn-primary{display:inline-flex;align-items:center;gap:.5rem;background:var(--g);color:#000;padding:.9rem 2rem;border-radius:8px;font-weight:700;font-size:.92rem;text-decoration:none;transition:all .25s;box-shadow:0 0 30px rgba(0,255,136,.2);}
+.btn-primary:hover{background:#00ffaa;transform:translateY(-3px);box-shadow:0 15px 40px rgba(0,255,136,.4);}
+.btn-outline{display:inline-flex;align-items:center;gap:.5rem;background:transparent;color:var(--txt);padding:.9rem 2rem;border-radius:8px;font-weight:500;font-size:.92rem;text-decoration:none;border:1px solid var(--bdr2);transition:all .25s;}
+.btn-outline:hover{border-color:rgba(0,255,136,.4);color:var(--g);}
+.hero-stats{display:flex;gap:2.5rem;padding-top:2.2rem;border-top:1px solid var(--bdr);animation:riseIn .6s ease .4s both;flex-wrap:wrap;}
+.hs-num{font-family:var(--disp);font-size:2.4rem;letter-spacing:2px;color:var(--g);line-height:1;}
+.hs-lbl{font-size:.73rem;color:var(--mut2);margin-top:.2rem;font-weight:400;}
+
+@keyframes riseIn{from{opacity:0;transform:translateY(28px);}to{opacity:1;transform:translateY(0);}}
+
+/* DASHBOARD */
+.hero-right{animation:riseIn .7s ease .25s both;}
+.dash{background:var(--surf);border:1px solid rgba(255,255,255,.08);border-radius:20px;overflow:hidden;box-shadow:0 50px 100px rgba(0,0,0,.7),inset 0 1px 0 rgba(255,255,255,.08);}
+.dash-topbar{background:var(--bg2);padding:.75rem 1.1rem;display:flex;align-items:center;gap:.55rem;border-bottom:1px solid var(--bdr);}
+.dtb{width:10px;height:10px;border-radius:50%;}
+.dash-label{font-size:.7rem;color:var(--mut2);margin-left:.4rem;font-weight:500;letter-spacing:.5px;}
+.dash-live-badge{margin-left:auto;background:rgba(0,255,136,.1);border:1px solid rgba(0,255,136,.2);color:var(--g);font-size:.62rem;font-weight:700;padding:.15rem .6rem;border-radius:50px;display:flex;align-items:center;gap:.3rem;}
+.dash-body{padding:1.3rem;}
+.dash-month{font-size:.68rem;color:var(--mut);font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:1rem;}
+.kpi-row{display:grid;grid-template-columns:1fr 1fr;gap:.7rem;margin-bottom:1.1rem;}
+.kpi{background:var(--surf2);border:1px solid var(--bdr);border-radius:12px;padding:.95rem 1rem;transition:border-color .2s;}
+.kpi:hover{border-color:var(--bdr2);}
+.kpi-val{font-family:var(--disp);font-size:2rem;letter-spacing:1px;line-height:1;}
+.kpi-lbl{font-size:.62rem;color:var(--mut2);margin-top:.2rem;font-weight:500;}
+.kv-g{color:var(--g);}
+.kv-a{color:var(--a);}
+.kv-r{color:var(--r);}
+.kv-b{color:#60aaff;}
+.machine-list{background:var(--bg2);border-radius:10px;overflow:hidden;margin-bottom:.9rem;}
+.ml-head{padding:.5rem .9rem;font-size:.62rem;font-weight:700;color:var(--mut);letter-spacing:1px;text-transform:uppercase;border-bottom:1px solid var(--bdr);}
+.ml-row{display:flex;justify-content:space-between;align-items:center;padding:.6rem .9rem;border-bottom:1px solid var(--bdr);font-size:.75rem;}
+.ml-row:last-child{border:none;}
+.ml-name{font-weight:600;color:var(--txt);}
+.ml-sub{font-size:.62rem;color:var(--mut);}
+.pill{padding:.18rem .65rem;border-radius:50px;font-size:.62rem;font-weight:700;}
+.p-g{background:rgba(0,255,136,.1);color:var(--g);}
+.p-a{background:rgba(255,170,0,.1);color:var(--a);}
+.p-r{background:rgba(255,68,102,.1);color:var(--r);}
+.dash-alert{background:rgba(0,255,136,.05);border:1px solid rgba(0,255,136,.12);border-radius:9px;padding:.65rem .9rem;font-size:.72rem;color:rgba(0,255,136,.7);display:flex;align-items:center;gap:.5rem;}
+
+/* PAIN BAND */
+.pain-band{background:var(--bg2);border-top:1px solid var(--bdr);border-bottom:1px solid var(--bdr);padding:1.8rem 4%;}
+.pain-inner{max-width:1200px;margin:0 auto;display:flex;justify-content:center;gap:3rem;flex-wrap:wrap;}
+.pain-pill{display:flex;align-items:center;gap:.8rem;}
+.pain-x{color:var(--r);font-size:.9rem;font-weight:700;}
+.pain-txt{font-size:.88rem;color:var(--mut2);}
+.pain-txt strong{color:var(--txt);}
+.pain-arrow{color:var(--g);font-size:.9rem;opacity:.6;margin:0 .3rem;}
+.pain-fix{font-size:.88rem;color:var(--g);font-weight:600;}
+
+/* SECTIONS */
+section{padding:6rem 4%;}
+.wrap{max-width:1200px;margin:0 auto;}
+.sec-eyebrow{display:inline-block;font-size:.7rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:.3rem .9rem;border-radius:50px;margin-bottom:.9rem;}
+.ey-g{color:var(--g);background:rgba(0,255,136,.07);border:1px solid rgba(0,255,136,.14);}
+.ey-a{color:var(--a);background:rgba(255,170,0,.07);border:1px solid rgba(255,170,0,.14);}
+.ey-v{color:var(--v);background:rgba(170,136,255,.07);border:1px solid rgba(170,136,255,.14);}
+.sec-h{font-family:var(--disp);font-size:clamp(2.5rem,4.5vw,4rem);letter-spacing:2px;line-height:1.0;margin-bottom:.9rem;}
+.sec-d{color:var(--mut2);font-size:.97rem;max-width:480px;line-height:1.85;font-weight:300;}
+
+/* SERVICES */
+#services{background:var(--bg2);}
+.svc-header{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:3.5rem;flex-wrap:wrap;gap:1.5rem;}
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;}
+.svc{background:var(--surf);border:1px solid var(--bdr);border-radius:20px;padding:2.5rem 2.2rem;display:flex;flex-direction:column;position:relative;overflow:hidden;transition:all .35s;}
+.svc::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;transform:scaleX(0);transform-origin:left;transition:transform .4s cubic-bezier(.23,1,.32,1);}
+.svc.sg::before{background:linear-gradient(90deg,var(--g),#00ffcc);}
+.svc.sa::before{background:linear-gradient(90deg,var(--a),#ffcc44);}
+.svc.sv::before{background:linear-gradient(90deg,var(--v),#cc88ff);}
+.svc:hover{transform:translateY(-6px);border-color:var(--bdr2);}
+.svc:hover::before{transform:scaleX(1);}
+.svc-ico{font-size:2.5rem;margin-bottom:1.2rem;}
+.svc-badge{display:inline-flex;align-items:center;gap:.4rem;font-size:.68rem;font-weight:700;padding:.22rem .75rem;border-radius:50px;margin-bottom:1rem;}
+.b-live{background:rgba(0,255,136,.1);color:var(--g);border:1px solid rgba(0,255,136,.2);}
+.b-soon{background:rgba(255,170,0,.1);color:var(--a);border:1px solid rgba(255,170,0,.2);}
+.svc h3{font-family:var(--disp);font-size:1.6rem;letter-spacing:1px;margin-bottom:.6rem;}
+.svc>p{color:var(--mut2);font-size:.88rem;line-height:1.75;margin-bottom:1.1rem;font-weight:300;flex:1;}
+.svc-pain-box{border-radius:8px;padding:.6rem .85rem;font-size:.78rem;margin-bottom:1.3rem;font-style:italic;}
+.spg{background:rgba(0,255,136,.05);border:1px solid rgba(0,255,136,.1);color:rgba(0,255,136,.65);}
+.spa{background:rgba(255,170,0,.05);border:1px solid rgba(255,170,0,.1);color:rgba(255,170,0,.7);}
+.spv{background:rgba(170,136,255,.05);border:1px solid rgba(170,136,255,.1);color:rgba(170,136,255,.7);}
+.svc-link{display:inline-flex;align-items:center;gap:.4rem;font-size:.85rem;font-weight:600;text-decoration:none;transition:gap .2s;}
+.sl-g{color:var(--g);}
+.sl-a{color:var(--a);}
+.sl-v{color:var(--v);}
+.svc-link:hover{gap:.8rem;}
+
+/* PRICING — WHATSAPP */
+#wa{background:var(--bg);}
+.price-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem;max-width:680px;margin-top:2.8rem;}
+.pc{border-radius:20px;padding:2.2rem;position:relative;overflow:hidden;transition:all .3s;}
+.pc-basic{background:linear-gradient(145deg,#0c1a14,#101e18);border:1px solid rgba(0,255,136,.14);}
+.pc-std{background:linear-gradient(145deg,#0e2018,#122620);border:1px solid rgba(0,255,136,.3);}
+.pc:hover{transform:translateY(-6px);}
+.pc-basic:hover{box-shadow:0 24px 60px rgba(0,255,136,.1);}
+.pc-std:hover{box-shadow:0 24px 60px rgba(0,255,136,.2);}
+.pc-top-line{position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--g),#00ffcc);}
+.pc-popular{position:absolute;top:14px;right:14px;background:var(--g);color:#000;font-size:.63rem;font-weight:800;padding:.2rem .7rem;border-radius:50px;}
+.pc-tier{font-size:.7rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--g);opacity:.6;margin-bottom:.3rem;}
+.pc-name{font-family:var(--disp);font-size:2.2rem;letter-spacing:2px;margin-bottom:.2rem;}
+.pc-sub{font-size:.8rem;color:var(--mut2);margin-bottom:1.3rem;font-weight:300;}
+.pc-price{display:flex;align-items:baseline;gap:.1rem;margin-bottom:.25rem;}
+.pc-cur{font-size:1.2rem;font-weight:700;color:var(--g);}
+.pc-amt{font-family:var(--disp);font-size:3rem;letter-spacing:1px;line-height:1;}
+.pc-per{font-size:.82rem;color:var(--mut2);}
+.pc-save{font-size:.76rem;color:var(--g);margin-bottom:1.2rem;font-weight:600;}
+.pc-hl{background:rgba(0,255,136,.07);border:1px solid rgba(0,255,136,.13);border-radius:7px;padding:.6rem .9rem;text-align:center;font-size:.8rem;font-weight:600;color:var(--g);margin-bottom:1.2rem;}
+.pc-feats{list-style:none;margin-bottom:1.6rem;}
+.pc-feats li{font-size:.85rem;color:var(--mut2);padding:.28rem 0;display:flex;gap:.5rem;font-weight:300;}
+.pc-feats li::before{content:'✓';color:var(--g);font-weight:700;flex-shrink:0;}
+.pc-btn{display:flex;align-items:center;justify-content:center;gap:.5rem;width:100%;padding:.88rem;border-radius:9px;font-weight:700;font-size:.88rem;text-decoration:none;transition:all .25s;border:none;}
+.pb-solid{background:var(--g);color:#000;}
+.pb-solid:hover{background:#00ffaa;box-shadow:0 8px 28px rgba(0,255,136,.4);transform:translateY(-1px);}
+.pb-out{background:transparent;color:var(--g);border:1px solid rgba(0,255,136,.28);}
+.pb-out:hover{background:rgba(0,255,136,.07);}
+.pc-foot{text-align:center;font-size:.72rem;color:var(--mut);margin-top:.85rem;}
+
+/* WEIGHTRACK */
+#wt{background:var(--bg2);position:relative;overflow:hidden;}
+#wt::before{content:'';position:absolute;top:-300px;right:-300px;width:700px;height:700px;background:radial-gradient(circle,rgba(255,170,0,.05) 0%,transparent 65%);pointer-events:none;}
+.wt-plans{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem;margin-top:2.8rem;}
+.wtc{background:var(--surf);border:1px solid var(--bdr);border-radius:16px;padding:1.7rem 1.5rem;transition:all .3s;position:relative;display:flex;flex-direction:column;}
+.wtc:hover{border-color:rgba(255,170,0,.25);transform:translateY(-4px);box-shadow:0 16px 40px rgba(255,170,0,.07);}
+.wtc.wt-hot{border-color:rgba(255,170,0,.3);background:linear-gradient(160deg,var(--surf),rgba(255,170,0,.03));}
+.wt-hot-tag{position:absolute;top:-11px;left:50%;transform:translateX(-50%);background:var(--a);color:#000;font-size:.62rem;font-weight:800;padding:.2rem .9rem;border-radius:50px;white-space:nowrap;}
+.wt-n{font-size:.65rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:rgba(255,170,0,.6);margin-bottom:.25rem;}
+.wt-name{font-family:var(--disp);font-size:1.3rem;letter-spacing:1px;margin-bottom:.35rem;}
+.wt-desc{font-size:.82rem;color:var(--mut2);line-height:1.6;margin-bottom:.5rem;font-weight:300;}
+.wt-tgt{font-size:.75rem;color:var(--a);font-weight:600;margin-bottom:.9rem;}
+.wt-feats{list-style:none;margin-bottom:1.3rem;flex:1;}
+.wt-feats li{font-size:.8rem;color:var(--mut2);padding:.22rem 0;display:flex;gap:.45rem;font-weight:300;}
+.wt-feats li::before{content:'✓';color:var(--a);font-weight:700;flex-shrink:0;}
+.wt-btn{display:block;text-align:center;border-radius:8px;padding:.65rem;font-weight:700;font-size:.82rem;text-decoration:none;transition:all .25s;border:1px solid rgba(255,170,0,.25);color:var(--a);}
+.wt-btn:hover,.wtc.wt-hot .wt-btn{background:var(--a);color:#000;box-shadow:0 6px 20px rgba(255,170,0,.3);}
+
+/* SMM */
+#smm{background:var(--bg);}
+.smm-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2.8rem;}
+.smc{border-radius:20px;padding:2.2rem;position:relative;overflow:hidden;transition:all .3s;}
+.smc1{background:linear-gradient(145deg,#120d20,#18112a);border:1px solid rgba(170,136,255,.14);}
+.smc2{background:linear-gradient(145deg,#140e24,#1c1232);border:1px solid rgba(170,136,255,.28);}
+.smc3{background:linear-gradient(145deg,#120d20,#18112a);border:1px solid rgba(170,136,255,.14);}
+.smc:hover{transform:translateY(-6px);}
+.smc1:hover{box-shadow:0 24px 60px rgba(170,136,255,.08);}
+.smc2:hover{box-shadow:0 24px 60px rgba(170,136,255,.16);}
+.smc3:hover{box-shadow:0 24px 60px rgba(170,136,255,.08);}
+.smc-top{position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--v),#cc88ff);}
+.smc-hot{position:absolute;top:14px;right:14px;background:var(--v);color:#fff;font-size:.62rem;font-weight:800;padding:.2rem .7rem;border-radius:50px;}
+.smc-tier-lbl{font-size:.7rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:rgba(170,136,255,.6);margin-bottom:.3rem;}
+.smc-name{font-family:var(--disp);font-size:2rem;letter-spacing:2px;margin-bottom:.2rem;}
+.smc-tier{font-size:.88rem;font-weight:600;margin-bottom:1.2rem;}
+.t1{color:var(--g);}
+.t2{color:#ff8844;}
+.t3{color:var(--a);}
+.smc-price{display:flex;align-items:baseline;gap:.1rem;margin-bottom:.25rem;}
+.smc-cur{font-size:1.2rem;font-weight:700;color:var(--v);}
+.smc-amt{font-family:var(--disp);font-size:3rem;letter-spacing:1px;line-height:1;}
+.smc-per{font-size:.82rem;color:var(--mut2);}
+.smc-note{font-size:.74rem;color:var(--mut2);margin-bottom:1.1rem;}
+.smc-plt{background:rgba(170,136,255,.08);border:1px solid rgba(170,136,255,.15);border-radius:7px;padding:.55rem .9rem;text-align:center;font-size:.78rem;font-weight:600;color:var(--v);margin-bottom:.75rem;}
+.smc-posts{background:rgba(0,255,136,.05);border:1px solid rgba(0,255,136,.1);border-radius:7px;padding:.55rem .9rem;text-align:center;font-size:.78rem;color:var(--txt);margin-bottom:1.3rem;}
+.smc-posts strong{color:var(--g);}
+.smc-feats{list-style:none;margin-bottom:1.5rem;}
+.smc-feats li{font-size:.84rem;color:var(--mut2);padding:.26rem 0;display:flex;gap:.5rem;font-weight:300;}
+.smc-feats li::before{content:'✓';color:var(--v);font-weight:700;flex-shrink:0;}
+.smc-btn{display:flex;align-items:center;justify-content:center;gap:.5rem;width:100%;padding:.88rem;border-radius:9px;font-weight:700;font-size:.88rem;text-decoration:none;transition:all .25s;border:none;}
+.sb-solid{background:var(--v);color:#fff;}
+.sb-solid:hover{background:#cc88ff;box-shadow:0 8px 28px rgba(170,136,255,.4);transform:translateY(-1px);}
+.sb-out{background:transparent;color:var(--v);border:1px solid rgba(170,136,255,.28);}
+.sb-out:hover{background:rgba(170,136,255,.07);}
+.smc-foot{text-align:center;font-size:.72rem;color:var(--mut);margin-top:.85rem;}
+
+/* TESTIMONIALS */
+#testi{background:var(--bg2);}
+.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2.8rem;}
+.tc{background:var(--surf);border:1px solid var(--bdr);border-radius:18px;padding:2rem;transition:all .3s;}
+.tc:hover{transform:translateY(-4px);border-color:var(--bdr2);}
+.stars{color:var(--a);letter-spacing:3px;font-size:.82rem;margin-bottom:1rem;}
+.tc-quote{color:var(--mut2);font-size:.88rem;line-height:1.85;margin-bottom:1.3rem;font-style:italic;font-weight:300;}
+.tc-auth{display:flex;align-items:center;gap:.75rem;}
+.av{width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--disp);font-size:1rem;letter-spacing:1px;flex-shrink:0;}
+.av1{background:linear-gradient(135deg,var(--g),var(--gd));color:#000;}
+.av2{background:linear-gradient(135deg,var(--a),var(--ad));color:#000;}
+.av3{background:linear-gradient(135deg,var(--v),var(--vd));color:#fff;}
+.av-name{font-weight:600;font-size:.88rem;}
+.av-biz{font-size:.74rem;color:var(--mut2);}
+.tc-verify{font-size:.68rem;color:rgba(0,255,136,.5);margin-top:.2rem;font-weight:600;}
+
+/* INDUSTRIES */
+#ind{background:var(--bg);}
+.ind-pills{display:flex;flex-wrap:wrap;gap:.9rem;margin-top:2.5rem;}
+.ip{display:flex;align-items:center;gap:.6rem;background:var(--surf);border:1px solid var(--bdr);padding:.7rem 1.3rem;border-radius:50px;font-size:.85rem;font-weight:500;transition:all .25s;}
+.ip:hover{border-color:var(--bdr2);background:var(--surf2);}
+.ip.ft{border-color:rgba(0,255,136,.25);background:rgba(0,255,136,.06);color:var(--g);}
+
+/* CONTACT */
+#contact{background:var(--bg2);}
+.contact-inner{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;margin-top:2.8rem;}
+.ci-info>p{color:var(--mut2);line-height:1.85;margin-bottom:2.2rem;font-size:.95rem;font-weight:300;}
+.cdetails{display:flex;flex-direction:column;gap:.8rem;}
+.cdi{display:flex;align-items:center;gap:.9rem;padding:.9rem 1.1rem;background:var(--surf);border:1px solid var(--bdr);border-radius:10px;transition:border-color .2s;}
+.cdi:hover{border-color:var(--bdr2);}
+.cdi-ico{font-size:1.2rem;flex-shrink:0;}
+.cdi-lbl{font-size:.7rem;color:var(--mut);margin-bottom:.15rem;text-transform:uppercase;letter-spacing:.5px;font-weight:600;}
+.cdi-val{font-size:.9rem;font-weight:500;}
+.ci-actions{display:flex;flex-direction:column;gap:1rem;}
+.c-wa{background:var(--g);color:#000;padding:1.1rem 2rem;border-radius:12px;font-weight:700;font-size:.95rem;text-decoration:none;display:flex;align-items:center;justify-content:center;gap:.6rem;transition:all .25s;box-shadow:0 0 40px rgba(0,255,136,.2);}
+.c-wa:hover{background:#00ffaa;transform:translateY(-3px);box-shadow:0 15px 40px rgba(0,255,136,.4);}
+.c-mail{background:transparent;color:var(--txt);padding:1.1rem 2rem;border-radius:12px;font-weight:500;font-size:.95rem;text-decoration:none;border:1px solid var(--bdr2);display:flex;align-items:center;justify-content:center;gap:.6rem;transition:all .25s;}
+.c-mail:hover{border-color:rgba(0,255,136,.35);color:var(--g);}
+.c-urgency{background:rgba(255,170,0,.07);border:1px solid rgba(255,170,0,.15);border-radius:10px;padding:.9rem 1.1rem;display:flex;align-items:flex-start;gap:.7rem;font-size:.82rem;color:rgba(255,170,0,.8);line-height:1.6;}
+.c-note{text-align:center;font-size:.75rem;color:var(--mut);}
+
+/* FOOTER */
+footer{background:var(--bg);border-top:1px solid var(--bdr);padding:2.2rem 4%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;}
+.f-logo{font-family:var(--disp);font-size:1.5rem;letter-spacing:2px;}
+.f-logo span{color:var(--g);}
+footer p{font-size:.8rem;color:var(--mut);}
+footer a{color:rgba(0,255,136,.6);text-decoration:none;transition:color .2s;}
+footer a:hover{color:var(--g);}
+.f-links{display:flex;gap:1.8rem;list-style:none;}
+.f-links a{color:var(--mut);text-decoration:none;font-size:.8rem;transition:color .2s;}
+.f-links a:hover{color:var(--txt);}
+
+/* STICKY MOBILE CTA */
+.sticky-cta{display:none;position:fixed;bottom:0;left:0;right:0;z-index:600;background:var(--g);color:#000;text-align:center;padding:1rem;font-weight:700;font-size:.92rem;text-decoration:none;box-shadow:0 -8px 30px rgba(0,255,136,.3);}
+
+/* FLOAT */
+.wa-float{position:fixed;bottom:1.8rem;right:1.8rem;z-index:400;width:58px;height:58px;border-radius:50%;background:var(--g);display:flex;align-items:center;justify-content:center;font-size:1.5rem;text-decoration:none;box-shadow:0 4px 24px rgba(0,255,136,.5);animation:wapulse 2.5s infinite;transition:transform .2s;}
+.wa-float:hover{transform:scale(1.12);}
+@keyframes wapulse{0%,100%{box-shadow:0 4px 24px rgba(0,255,136,.5);}50%{box-shadow:0 4px 48px rgba(0,255,136,.85);}}
+
+/* RESPONSIVE */
+@media(max-width:1024px){.wt-plans{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:900px){
+  .hero-inner{grid-template-columns:1fr;}
+  .hero-right{display:none;}
+  .svc-grid,.smm-grid,.testi-grid{grid-template-columns:1fr;}
+  .contact-inner{grid-template-columns:1fr;gap:3rem;}
+  .price-grid{grid-template-columns:1fr;max-width:400px;}
+}
+@media(max-width:768px){
+  .nav-links{display:none;}
+  .burger{display:flex;}
+  section{padding:4rem 4%;}
+  .wt-plans{grid-template-columns:1fr;}
+  h1{font-size:3.5rem;}
+  .sticky-cta{display:block;}
+  .wa-float{bottom:5.5rem;}
+}
+</style>
+</head>
+<body>
+
+<div class="cur" id="cur"></div>
+<div class="cur2" id="cur2"></div>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="logo">SREENI<span>VERSE</span></a>
+  <ul class="nav-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#wa">WhatsApp</a></li>
+    <li><a href="#wt">WeighTrack</a></li>
+    <li><a href="#smm">Social Media</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="https://wa.me/919347488883?text=Hi%20Sreeni%2C%20I%20want%20a%20free%20consultation!" target="_blank" class="nav-cta">💬 Free Consult</a></li>
+  </ul>
+  <div class="burger" onclick="toggleMob()"><span></span><span></span><span></span></div>
+</nav>
+<div class="mob" id="mob">
+  <a href="#services" onclick="closeMob()">Services</a>
+  <a href="#wa" onclick="closeMob()">WhatsApp Plans</a>
+  <a href="#wt" onclick="closeMob()">WeighTrack</a>
+  <a href="#smm" onclick="closeMob()">Social Media</a>
+  <a href="#contact" onclick="closeMob()">Contact</a>
+  <a href="https://wa.me/919347488883?text=Hi%20Sreeni%2C%20free%20consultation%20please!" target="_blank" onclick="closeMob()">💬 WhatsApp Us Free</a>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-canvas">
+    <canvas id="c"></canvas>
+  </div>
+  <div class="hero-glow"></div>
+  <div class="hero-inner">
+    <div class="hero-left">
+      <div class="hero-eyebrow"><span class="dot-live"></span>Hyderabad · Telangana · Since 2024</div>
+      <h1>STOP<span class="line2">LOSING</span><span class="line3">BUSINESS.</span></h1>
+      <p class="hero-desc">Smart automation for Hyderabad SMEs — WhatsApp bots, WeighTrack Legal Metrology engine & Social Media management. All in Telugu & English.</p>
+      <p class="hero-te">మీ business ని automate చేద్దాం — right now. ⚡</p>
+      <div class="hero-btns">
+        <a href="https://wa.me/919347488883?text=Hi%20Sreeni%2C%20I%20want%20a%20free%20consultation!" target="_blank" class="btn-primary">💬 Free Consultation</a>
+        <a href="#services" class="btn-outline">See What We Build →</a>
+      </div>
+      <div class="hero-stats">
+        <div><div class="hs-num">50+</div><div class="hs-lbl">Businesses served</div></div>
+        <div><div class="hs-num">24/7</div><div class="hs-lbl">Bot uptime</div></div>
+        <div><div class="hs-num">0</div><div class="hs-lbl">Missed renewals</div></div>
+        <div><div class="hs-num">₹0</div><div class="hs-lbl">Consultation fee</div></div>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="dash">
+        <div class="dash-topbar">
+          <div class="dtb" style="background:#ff5f57"></div>
+          <div class="dtb" style="background:#febc2e"></div>
+          <div class="dtb" style="background:#28c840"></div>
+          <span class="dash-label">WeighTrack — Boss Dashboard</span>
+          <div class="dash-live-badge"><span class="dot-live" style="width:5px;height:5px;"></span>Live</div>
+        </div>
+        <div class="dash-body">
+          <div class="dash-month">📅 February 2026 · Auto-updating</div>
+          <div class="kpi-row">
+            <div class="kpi"><div class="kpi-val kv-g">312</div><div class="kpi-lbl">Total Machines</div></div>
+            <div class="kpi"><div class="kpi-val kv-a">34</div><div class="kpi-lbl">Due in 15 Days</div></div>
+            <div class="kpi"><div class="kpi-val kv-r">6</div><div class="kpi-lbl">Overdue ⚠️</div></div>
+            <div class="kpi"><div class="kpi-val kv-b">12</div><div class="kpi-lbl">Half Payments</div></div>
+          </div>
+          <div class="machine-list">
+            <div class="ml-head">Recent Machines</div>
+            <div class="ml-row"><div><div class="ml-name">Canara Bank, Ameerpet</div><div class="ml-sub">Medchal District</div></div><span class="pill p-a">Due in 7d</span></div>
+            <div class="ml-row"><div><div class="ml-name">IOB Ecil Branch</div><div class="ml-sub">Ranga Reddy</div></div><span class="pill p-g">Verified ✓</span></div>
+            <div class="ml-row"><div><div class="ml-name">Margadarsi, Kukatpally</div><div class="ml-sub">Vikarabad</div></div><span class="pill p-r">Overdue!</span></div>
+            <div class="ml-row"><div><div class="ml-name">Union Bank, Hanamkonda</div><div class="ml-sub">Hanamkonda Dist</div></div><span class="pill p-g">Paid ✓</span></div>
+          </div>
+          <div class="dash-alert">⚡ 3 WhatsApp alerts sent automatically today</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PAIN BAND -->
+<div class="pain-band">
+  <div class="pain-inner">
+    <div class="pain-pill"><span class="pain-x">✗</span><span class="pain-txt"><strong>Missed renewals</strong> from Excel</span><span class="pain-arrow">→</span><span class="pain-fix">WeighTrack solves it</span></div>
+    <div class="pain-pill"><span class="pain-x">✗</span><span class="pain-txt"><strong>Leads lost</strong> after hours</span><span class="pain-arrow">→</span><span class="pain-fix">WhatsApp bot answers</span></div>
+    <div class="pain-pill"><span class="pain-x">✗</span><span class="pain-txt"><strong>Social media</strong> takes too long</span><span class="pain-arrow">→</span><span style="color:var(--v);font-size:.88rem;font-weight:600;">We manage it</span></div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="wrap">
+    <div class="svc-header">
+      <div>
+        <span class="sec-eyebrow ey-g">What We Build</span>
+        <h2 class="sec-h">THREE TOOLS.<br>ONE PARTNER.</h2>
+      </div>
+      <p class="sec-d">No generic software. Built for how Hyderabad businesses actually work — in Telugu & English.</p>
+    </div>
+    <div class="svc-grid">
+      <div class="svc sg">
+        <div class="svc-ico">💬</div>
+        <span class="svc-badge b-live"><span class="dot-live" style="width:5px;height:5px;display:inline-block;"></span>Live & Running</span>
+        <h3>WHATSAPP AUTOMATION</h3>
+        <p>AI chatbots answering enquiries 24/7. Bookings, pricing, lead capture — all automatic in Telugu, Hindi & English. Never miss a lead again.</p>
+        <div class="svc-pain-box spg"><strong>Kills:</strong> Missed after-hours leads, manual follow-ups, response delays</div>
+        <a href="#wa" class="svc-link sl-g">View Plans & Pricing →</a>
+      </div>
+      <div class="svc sa">
+        <div class="svc-ico">⚖️</div>
+        <span class="svc-badge b-soon">🔧 Early Access</span>
+        <h3>WEIGHTRACK LM</h3>
+        <p>Built for weighing machine dealers. Renewal engine, voucher tracker, payment dashboard, WhatsApp autopilot. 1000+ machines — one screen.</p>
+        <div class="svc-pain-box spa"><strong>Kills:</strong> Folder searching, missed renewals, RI follow-up chaos, half-payment confusion</div>
+        <a href="#wt" class="svc-link sl-a">View Plans & Pricing →</a>
+      </div>
+      <div class="svc sv">
+        <div class="svc-ico">📱</div>
+        <span class="svc-badge b-soon">🔧 Tool Coming</span>
+        <h3>SOCIAL MEDIA MGT</h3>
+        <p>Done-for-you Instagram, Facebook, YouTube, LinkedIn posting. Reels & Shorts creation, captions, hashtags — weekly. Telugu & English.</p>
+        <div class="svc-pain-box spv"><strong>Kills:</strong> Daily posting burden, inconsistent presence, content stress</div>
+        <a href="#smm" class="svc-link sl-v">View Packages →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHATSAPP PRICING -->
+<section id="wa">
+  <div class="wrap">
+    <span class="sec-eyebrow ey-g">WhatsApp Automation</span>
+    <h2 class="sec-h">WHATSAPP PLANS</h2>
+    <p class="sec-d">Baileys-powered 24/7 bot. Setup FREE on Standard. Currently onboarding 7 new businesses this month.</p>
+    <div class="price-grid">
+      <div class="pc pc-basic">
+        <div class="pc-top-line"></div>
+        <div class="pc-tier">WhatsApp Bot</div>
+        <div class="pc-name">BASIC</div>
+        <div class="pc-sub">🤖 Auto-Reply System</div>
+        <div class="pc-price"><span class="pc-cur">₹</span><span class="pc-amt">1,199</span><span class="pc-per">/mo</span></div>
+        <div class="pc-save">Installation ₹500 · 3-Month Plan: Save ₹198</div>
+        <div class="pc-hl">💬 200 Messages/Day · Lead Capture</div>
+        <ul class="pc-feats">
+          <li>Auto-reply system</li>
+          <li>Lead capture & storage</li>
+          <li>Business hours replies</li>
+          <li>Email support</li>
+        </ul>
+        <a href="https://wa.me/919347488883?text=Hi%20Sreeni%2C%20WhatsApp%20BASIC%20plan%20%E2%82%B91%2C199%2Fmonth%20interested!" class="pc-btn pb-out" target="_blank">💬 Get Basic Plan</a>
+        <p class="pc-foot">✅ Perfect for Small Businesses</p>
+      </div>
+      <div class="pc pc-std">
+        <div class="pc-top-line"></div>
+        <div class="pc-popular">⭐ Popular</div>
+        <div class="pc-tier">WhatsApp Bot</div>
+        <div class="pc-name">STANDARD</div>
+        <div class="pc-sub">🚀 Smart Bot</div>
+        <div class="pc-price"><span class="pc-cur">₹</span><span class="pc-amt">1,699</span><span class="pc-per">/mo</span></div>
+        <div class="pc-save">Setup FREE · 3-Month Plan: Save ₹1,098</div>
+        <div class="pc-hl">🤖 Unlimited Messages · Full Dashboard</div>
+        <ul class="pc-feats">
+          <li>Everything in Basic +</li>
+          <li>Unlimited messages</li>
+          <li>Analytics dashboard</li>
+          <li>Custom integrations</li>
+          <li>Priority support</li>
+        </ul>
+        <a href="https://wa.me/919347488883?text=Hi%20Sreeni%2C%20WhatsApp%20STANDARD%20plan%20%E2%82%B91%2C699%2Fmonth%20interested!" class="pc-btn pb-solid" target="_blank">💬 Get Standard Plan</a>
+        <p class="pc-foot">✅ Best for Growing Businesses</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WEIGHTRACK -->
+<section id="wt">
+  <div class="wrap">
+    <span class="sec-eyebrow ey-a">Legal Metrology SaaS</span>
+    <h2 class="sec-h">WEIGHTRACK PLANS</h2>
+    <p class="sec-d">Only Legal Metrology software built for Telangana dealers. Starting ₹3,000–₹12,000/month depending on scale. Free demo available.</p>
+    <div class="wt-plans">
+      <div class="wtc">
+        <div class="wt-n">Plan 01</div>
+        <div class="wt-name">EXCEL INTEL</div>
+        <div class="wt-desc">Make your existing Excel smart — auto due dates, status colors, renewal view.</div>
+        <div class="wt-tgt">🎯 Semi-organised dealers</div>
+        <ul class="wt-feats">
+          <li>Auto due date calc</li>
+          <li>Red/Amber/Green status</li>
+          <li>Renewal status column</li>
+          <li>Basic dashboard</li>
+        </ul>
+        <a href="https://wa.me/919347488883?text=Hi%20Sreeni%2C%20WeighTrack%20Excel%20Intelligence%20plan%20interested!" class="wt-btn" target="_blank">💬 Enquire</a>
+      </div>
+      <div class="wtc wt-hot">
+        <div class="wt-hot-tag">⭐ Most Popular</div>
+        <div class="wt-n">Plan 02</div>
+        <div class="wt-name">RENEWAL CONTROL</div>
+        <div class="wt-desc">Full web dashboard. Machine master DB, auto renewal engine, boss view, WhatsApp alerts.</div>
+        <div class="wt-tgt">🎯 1000+ machine dealers</div>
+        <ul class="wt-feats">
+          <li>Machine master database</li>
+          <li>Auto renewal engine</li>
+          <li>Voucher lifecycle tracker</li>
+          <li>Payment per machine</li>
+          <li>Boss dashboard</li>
+          <li>WhatsApp alerts included</li>
+        </ul>
+        <a href="https://wa.me/919347488883?text=Hi%20Sreeni%2C%20WeighTrack%20Renewal%20Control%20Dashboard%20interested%20-%20demo%20please!" class="wt-btn" target="_blank">💬 Book Demo</a>
+      </div>
+      <div class="wtc">
+        <div class="wt-n">Plan 03</div>
+        <div class="wt-name">REMINDER AUTO</div>
+        <div class="wt-desc">Automation layer only — reminders run on autopilot. Easy entry point.</div>
+        <div class="wt-tgt">🎯 Busy dealers · Low friction</div>
+        <ul class="wt-feats">
+          <li>30-day renewal alerts</li>
+          <li>Payment follow-ups</li>
+          <li>Monthly summary report</li>
+          <li>Easy upgrade to Plan 02</li>
+        </ul>
+        <a href="https://wa.me/919347488883?text=Hi%20Sreeni%2C%20WeighTrack%20Reminder%20Automation%20plan%20interested!" class="wt-btn" target="_blank">💬 Enquire</a>
+      </div>
+      <div class="wtc">
+        <div class="wt-n">Plan 04</div>
+        <div class="wt-name">OP AUDIT</div>
+        <div class="wt-desc">Workflow audit, process restructuring, SOPs, data centralisation. One-time high-value engagement.</div>
+        <div class="wt-tgt">🎯 Mid-size dealers</div>
+        <ul class="wt-feats">
+          <li>Full workflow audit</li>
+          <li>Process restructuring</li>
+          <li>Data centralisation</li>
+          <li>SOP creation</li>
+        </ul>
+        <a href="https://wa.me/919347488883?text=Hi%20Sreeni%2C%20WeighTrack%20Operational%20Audit%20interested!" class="wt-btn" target="_blank">💬 Enquire</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOCIAL MEDIA -->
+<section id="smm">
+  <div class="wrap">
+    <span class="sec-eyebrow ey-v">Social Media Management</span>
+    <h2 class="sec-h">SMM PACKAGES</h2>
+    <p class="sec-d">Done-for-you posting, Reels editing, captions — Telugu & English. You focus on business, we handle content.</p>
+    <div class="smm-grid">
+      <div class="smc smc1">
+        <div class="smc-tier-lbl">Social Media</div>
+        <div class="smc-name">PKG 1</div>
+        <div class="smc-tier t1">🌱 STARTER</div>
+        <div class="smc-price"><span class="smc-cur">₹</span><span class="smc-amt">5,000</span></div>
+        <div class="smc-note">First Month · ₹3,500/month after · Save ₹1,500</div>
+        <div class="smc-plt">📲 Facebook + Instagram</div>
+        <div class="smc-posts">📋 <strong>10 Posts/Month</strong> · 6 Images + 4 Videos</div>
+        <ul class="smc-feats">
+          <li>Professional templates</li>
+          <li>Video editing included</li>
+          <li>Captions + Hashtags</li>
+          <li>2 posts per week</li>
+          <li>Monthly analytics</li>
+        </ul>
+        <a href="https://wa.me/919347488883?text=Hi%20Sreeni%2C%20SMM%20Package%201%20Starter%20%E2%82%B95%2C000%20interested!" class="smc-btn sb-out" target="_blank">💬 Get Starter</a>
+        <p class="smc-foot">✅ Perfect for Small Businesses</p>
+      </div>
+      <div class="smc smc2">
+        <div class="smc-top"></div>
+        <div class="smc-hot">🔥 Popular</div>
+        <div class="smc-tier-lbl">Social Media</div>
+        <div class="smc-name">PKG 2</div>
+        <div class="smc-tier t2">🔥 GROWTH</div>
+        <div class="smc-price"><span class="smc-cur">₹</span><span class="smc-amt">7,000</span></div>
+        <div class="smc-note">First Month · ₹6,000/month after · Save ₹1,000</div>
+        <div class="smc-plt">📲 FB + Instagram + YouTube</div>
+        <div class="smc-posts">📋 <strong>16 Posts/Month</strong> · 8 Images + 8 Reels</div>
+        <ul class="smc-feats">
+          <li>Professional templates</li>
+          <li>Reels / Shorts editing</li>
+          <li>AI-generated captions</li>
+          <li>Trending hashtags</li>
+          <li>Weekly analytics report</li>
+        </ul>
+        <a href="https://wa.me/919347488883?text=Hi%20Sreeni%2C%20SMM%20Package%202%20Growth%20%E2%82%B97%2C000%20interested!" class="smc-btn sb-solid" target="_blank">💬 Get Growth</a>
+        <p class="smc-foot">✅ Best for Restaurants & Gyms</p>
+      </div>
+      <div class="smc smc3">
+        <div class="smc-tier-lbl">Social Media</div>
+        <div class="smc-name">PKG 3</div>
+        <div class="smc-tier t3">👑 PRO</div>
+        <div class="smc-price"><span class="smc-cur">₹</span><span class="smc-amt">10,000</span></div>
+        <div class="smc-note">First Month · ₹8,500/month after · Save ₹1,500</div>
+        <div class="smc-plt">📲 FB + IG + YouTube + LinkedIn + X</div>
+        <div class="smc-posts">📋 <strong>20+ Posts/Month</strong> · 12 Images + 8 Reels</div>
+        <ul class="smc-feats">
+          <li>Full video production</li>
+          <li>5 platform coverage</li>
+          <li>Daily posting</li>
+          <li>Community management</li>
+          <li>Priority support</li>
+        </ul>
+        <a href="https://wa.me/919347488883?text=Hi%20Sreeni%2C%20SMM%20Package%203%20Pro%20%E2%82%B910%2C000%20interested!" class="smc-btn sb-out" target="_blank">💬 Get Pro</a>
+        <p class="smc-foot">✅ For Established Businesses</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testi">
+  <div class="wrap">
+    <span class="sec-eyebrow ey-g">Client Results</span>
+    <h2 class="sec-h">REAL RESULTS.<br>REAL BUSINESSES.</h2>
+    <div class="testi-grid">
+      <div class="tc">
+        <div class="stars">★★★★★</div>
+        <p class="tc-quote">"WeighTrack valla missed renewals zero ayyayi. Boss oka screen lo anni chustunnadu. Sreeni garu super responsive — Telugu lo kuda explain chesaru!"</p>
+        <div class="tc-auth">
+          <div class="av av1">R</div>
+          <div>
+            <div class="av-name">Ravi Kumar</div>
+            <div class="av-biz">Weighing Machine Dealer, Hyderabad</div>
+            <div class="tc-verify">✓ Verified Client — Medchal District</div>
+          </div>
+        </div>
+      </div>
+      <div class="tc">
+        <div class="stars">★★★★★</div>
+        <p class="tc-quote">"WhatsApp Standard plan tho maa gym lo enquiries 40% increase ayyayi. Night ki kuda leads vasthunnayi — bot Telugu lo reply chestundi!"</p>
+        <div class="tc-auth">
+          <div class="av av2">P</div>
+          <div>
+            <div class="av-name">Priya Reddy</div>
+            <div class="av-biz">FitZone Gym, Secunderabad</div>
+            <div class="tc-verify">✓ Verified Client — WhatsApp Standard</div>
+          </div>
+        </div>
+      </div>
+      <div class="tc">
+        <div class="stars">★★★★★</div>
+        <p class="tc-quote">"SMM Package 2 tho maa restaurant lo engagement doubled ayyindi. Reels editing, captions anni chestunnaru — nenu business ki focus chestunaanu!"</p>
+        <div class="tc-auth">
+          <div class="av av3">A</div>
+          <div>
+            <div class="av-name">Arjun Sharma</div>
+            <div class="av-biz">Restaurant Owner, Banjara Hills</div>
+            <div class="tc-verify">✓ Verified Client — SMM Growth</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INDUSTRIES -->
+<section id="ind">
+  <div class="wrap">
+    <span class="sec-eyebrow ey-g">Who We Serve</span>
+    <h2 class="sec-h">EVERY HYDERABAD<br>BUSINESS.</h2>
+    <div class="ind-pills">
+      <div class="ip ft">⚖️ Weighing Machine Dealers</div>
+      <div class="ip ft">💬 WhatsApp Businesses</div>
+      <div class="ip">🏋️ Fitness & Gyms</div>
+      <div class="ip">🏠 Real Estate</div>
+      <div class="ip">🍕 Restaurants & Food</div>
+      <div class="ip">🏥 Healthcare Clinics</div>
+      <div class="ip">🎓 Education & Coaching</div>
+      <div class="ip">🛒 Retail Shops</div>
+      <div class="ip">🏢 SMEs & Corporates</div>
+      <div class="ip">💍 Jewellery Shops</div>
+      <div class="ip">🏦 Banks & NBFCs</div>
+      <div class="ip">📦 Logistics</div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="wrap">
+    <span class="sec-eyebrow ey-g">Get In Touch</span>
+    <h2 class="sec-h">FREE CONSULT.<br>NO COMMITMENT.</h2>
+    <div class="contact-inner">
+      <div class="ci-info">
+        <p>Tell us your problem. We'll tell you honestly if we can solve it — and exactly how. Telugu లో కూడా మాట్లాడవచ్చు. Usually replies within 5 minutes. ⚡</p>
+        <div class="cdetails">
+          <div class="cdi"><div class="cdi-ico">👤</div><div><div class="cdi-lbl">Founder</div><div class="cdi-val">Dandiga Sreenivas (Sreeni)</div></div></div>
+          <div class="cdi"><div class="cdi-ico">📱</div><div><div class="cdi-lbl">Phone / WhatsApp</div><div class="cdi-val">+91 93474 88883</div></div></div>
+          <div class="cdi"><div class="cdi-ico">✉️</div><div><div class="cdi-lbl">Email</div><div class="cdi-val">sreeni.aitech.automations@gmail.com</div></div></div>
+          <div class="cdi"><div class="cdi-ico">📍</div><div><div class="cdi-lbl">Location</div><div class="cdi-val">Yamjal, RR District, Hyderabad, Telangana</div></div></div>
+        </div>
+      </div>
+      <div class="ci-actions">
+        <div class="c-urgency">⚡ Currently onboarding 5 new businesses for 2026. Limited slots available this month.</div>
+        <a href="https://wa.me/919347488883?text=Hi%20Sreeni%2C%20I%20want%20a%20free%20consultation%20for%20my%20business!" class="c-wa" target="_blank">💬 WhatsApp Now — It's Free</a>
+        <a href="mailto:sreeni.aitech.automations@gmail.com?subject=Business%20Inquiry%20%E2%80%94%20Sreeniverse" class="c-mail">✉️ Send Email</a>
+        <p class="c-note">⚡ Replies in 5 min · Telugu & English · Zero pressure</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="f-logo">SREENI<span>VERSE</span></div>
+  <p>© 2026 Sreeniverse Technologies · Hyderabad, Telangana</p>
+  <ul class="f-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#wt">WeighTrack</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="https://wa.me/919347488883" target="_blank">WhatsApp</a></li>
+  </ul>
+</footer>
+
+<!-- MOBILE STICKY CTA -->
+<a href="https://wa.me/919347488883?text=Hi%20Sreeni%2C%20free%20consultation%20please!" class="sticky-cta" target="_blank">💬 WhatsApp Sreeni — Free Consultation</a>
+
+<!-- WA FLOAT -->
+<a href="https://wa.me/919347488883?text=Hi%20Sreeni%2C%20interested%20in%20your%20services!" class="wa-float" target="_blank">💬</a>
+
+<script>
+// CURSOR
+const cur=document.getElementById('cur'),cur2=document.getElementById('cur2');
+document.addEventListener('mousemove',e=>{
+  cur.style.left=e.clientX+'px';cur.style.top=e.clientY+'px';
+  setTimeout(()=>{cur2.style.left=e.clientX+'px';cur2.style.top=e.clientY+'px';},80);
+});
+document.querySelectorAll('a,button').forEach(el=>{
+  el.addEventListener('mouseenter',()=>{cur2.style.transform='translate(-50%,-50%) scale(2)';cur2.style.borderColor='rgba(0,255,136,.5)';});
+  el.addEventListener('mouseleave',()=>{cur2.style.transform='translate(-50%,-50%) scale(1)';cur2.style.borderColor='rgba(0,255,136,.3)';});
+});
+
+// MOBILE NAV
+function toggleMob(){document.getElementById('mob').classList.toggle('on');}
+function closeMob(){document.getElementById('mob').classList.remove('on');}
+document.addEventListener('click',e=>{if(!e.target.closest('nav')&&!e.target.closest('#mob'))closeMob();});
+
+// PARTICLE CANVAS
+const canvas=document.getElementById('c');
+const ctx=canvas.getContext('2d');
+let W,H,particles=[];
+function resize(){W=canvas.width=canvas.offsetWidth;H=canvas.height=canvas.offsetHeight;}
+resize();window.addEventListener('resize',resize);
+class P{
+  constructor(){this.reset();}
+  reset(){this.x=Math.random()*W;this.y=Math.random()*H;this.size=Math.random()*1.5+.3;this.speedX=(Math.random()-.5)*.3;this.speedY=(Math.random()-.5)*.3;this.opacity=Math.random()*.4+.05;this.color=Math.random()>.7?'0,255,136':Math.random()>.5?'255,170,0':'170,136,255';}
+  update(){this.x+=this.speedX;this.y+=this.speedY;if(this.x<0||this.x>W||this.y<0||this.y>H)this.reset();}
+  draw(){ctx.beginPath();ctx.arc(this.x,this.y,this.size,0,Math.PI*2);ctx.fillStyle=`rgba(${this.color},${this.opacity})`;ctx.fill();}
+}
+for(let i=0;i<120;i++)particles.push(new P());
+function animate(){ctx.clearRect(0,0,W,H);particles.forEach(p=>{p.update();p.draw();});
+// Draw connections
+for(let i=0;i<particles.length;i++){for(let j=i+1;j<particles.length;j++){const dx=particles[i].x-particles[j].x,dy=particles[i].y-particles[j].y,dist=Math.sqrt(dx*dx+dy*dy);if(dist<80){ctx.beginPath();ctx.moveTo(particles[i].x,particles[i].y);ctx.lineTo(particles[j].x,particles[j].y);ctx.strokeStyle=`rgba(0,255,136,${.05*(1-dist/80)})`;ctx.lineWidth=.5;ctx.stroke();}}}
+requestAnimationFrame(animate);}
+animate();
+
+// SCROLL REVEAL
+const observer=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.style.opacity='1';e.target.style.transform='translateY(0)';}});},{threshold:.1});
+document.querySelectorAll('.svc,.wtc,.tc,.pc,.smc,.ip').forEach(el=>{el.style.opacity='0';el.style.transform='translateY(30px)';el.style.transition='opacity .6s ease,transform .6s ease';observer.observe(el);});
+</script>
+</body>
+</html>
